@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra&family=Oswald:wght@200&display=swap" rel="stylesheet">
+</head>
+<style>
+    select {
+        width: 60%;
+        height: 50px;
+        font-family: 'Alkatra', cursive;
+    }
+
+    fieldset {
+
+        background-color: whitesmoke;
+        font-family: 'Alkatra', cursive;
+    }
+
+    h3 {
+        color: red;
+    }
+
+    .p1 {
+        color: rebeccapurple;
+    }
+    button{
+        width: 50%;
+        height: 40px;
+        background-color:darksalmon;
+    }
+
+</style>
+<body>
+<fieldset align="center" style="width: 300px ">
+    <h3>TIP CALCULATOR</h3>
+    <P>How much was you bill?</P>
+    <p class="p1">$<input type="text" id="bill" placeholder="usd"></p>
+    <p>How was your service?</p>
+    <select id="percent">
+        <option value="30">30%-Outstanding</option>
+        <option value="20">20%-good</option>
+        <option value="15">15%-It was Ok</option>
+        <option value="10">10%-BAS</option>
+        <option value="5">5%-Terrible</option>
+    </select>
+    <p>How many people are sharing the bill?</p>
+    <p><input placeholder="people" id="people" type="text">people</p>
+    <button onclick="clinkCalculate()">CALCULATE!</button>
+    <h3>TIP AMOUNT</h3>
+    <p id="print"></p>
+    <h4>Each</h4>
+</fieldset>
+<script>
+    function clinkCalculate() {
+        let bill = +document.getElementById("bill").value;
+        let percent = +document.getElementById("percent").value;
+        let people = +document.getElementById("people").value;
+        let resoult = ((bill * percent) / 100) / people;
+        if (percent === 30) {
+            document.getElementById("print").innerText = resoult + "USD";
+        } else if (percent === 20) {
+            document.getElementById("print").innerText = resoult + "USD";
+        } else if (percent === 15) {
+            document.getElementById("print").innerText = resoult + "USD";
+        } else if (percent === 10) {
+            document.getElementById("print").innerText = resoult + "USD";
+        } else {
+            document.getElementById("print").innerText = resoult + "USD";
+        }
+    }
+</script>
+</body>
+</html>
