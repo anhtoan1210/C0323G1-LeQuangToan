@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let canhA = +prompt("mời bạn nhập cạnh A");
+    let canhB = +prompt('mời bạn nhập cạnh B');
+    let canhC = +prompt("mời bạn nhập canh c");
+    if ((canhC * canhC) === (canhA * canhA) + (canhB * canhB)
+        || (canhB * canhB) === (canhA * canhA) + (canhC * canhC)
+        || (canhA * canhA) === (canhB * canhB) + (canhC * canhC)) {
+        document.write("đây là tam giác vuông");
+    } else {
+        document.write("đây không phải là tam giác vuông");
+    }
+</script>
+</body>
+</html>
