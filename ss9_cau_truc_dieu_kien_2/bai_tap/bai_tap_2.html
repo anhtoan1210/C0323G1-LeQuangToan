@@ -1,10 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let luong = +prompt("nhap so tien luong 1 thang cua nhanh vien");
+    let gioLamViec = +prompt("nhap so gio lam viec");
+    let thuong;
+    if (gioLamViec >= 200) {
+        thuong = luong * 20 / 100;
+        document.write("so tien thuong la" + thuong);
+    } else if (gioLamViec >= 100 && gioLamViec < 200) {
+        thuong = luong * 10 / 100;
+        document.write("so tien thuong la" + thuong);
+    } else {
+        document.write("chua tru la may roi nhe");
+    }
+
+</script>
 </body>
 </html>

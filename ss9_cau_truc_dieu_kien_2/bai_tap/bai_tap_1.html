@@ -1,10 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<input type="text" id="Money" placeholder="nhap tien">
+<select id="select1">
+    <option value="usd">USD(Đô la)</option>
+    <option value="yen"> JPY(Yên)</option>
+    <option value="dong">VND(Việt Nam đồng)</option>
+    <option value="te">RMB(tệ)</option>
+    <option value="bang">RBP(pound-bảng anh)</option>
+</select>
+<select id="select2">
+    <option value="usd">USD(Đô la)</option>
+    <option value="yen">JPY(Yên)</option>
+    <option value="dong">VND(Việt Nam đồng)</option>
+    <option value="te"> RMB(tệ)</option>
+    <option value="bang">RBP(pound-bảng anh)</option>
+</select>
+<p id="print"></p>
+<button type="button" onclick="chuyenDoi()">convert</button>
+<script>
+    function chuyenDoi() {
+        let tien = document.getElementById("Money").value;
+        let danhSach1 = document.getElementById("select1").value;
+        let danhSach2 = document.getElementById("select2").value;
+        let resum;
+        if (danhSach1 === danhSach2) {
+            resum = tien;
+            document.getElementById("print").innerText = resum;
+        } else if (danhSach1 == "usd" && danhSach2 == "dong") {
+            resum = tien * 23000;
+            document.getElementById("print").innerText = resum;
+        } else if (danhSach1 == "usd" && danhSach2 == "yen") {
+            resum = tien * 133.6;
+            document.getElementById("print").innerText = resum;
+        } else if (danhSach1 == "usd" && danhSach2 == "te") {
+            resum = tien * 6.88;
+            document.getElementById("print").innerText = resum;
+        } else if (danhSach1 == "usd" && danhSach2 == "bang") {
+            resum = tien * 0.81;
+            document.getElementById("print").innerText = resum;
+        } else if (danhSach1 == "dong" && danhSach2 == "usd") {
+            resum = tien / 23000;
+            document.getElementById("print").innerText = resum;
+        } else if (danhSach1 == "dong" && danhSach2 == "yen") {
+            resum = tien * 0.0075;
+            document.getElementById("print").innerText = resum;
+        } else if (danhSach1 == "dong" && danhSach2 == "bang") {
+            resum = tien * 0.000034;
+            document.getElementById("print").innerText = resum;
+        } else if (danhSach1 == "dong" && danhSach2 == "te") {
+            resum = tien * 0.00029;
+            document.getElementById("print").innerText=resum;
+        }
+    }
+</script>
 </body>
 </html>

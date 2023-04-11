@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let vang = +prompt("nhập số ngày vắng");
+    let tongBuoiHoc = +prompt("nhập tổng số lượng buổi học trong 1 module");
+    if (vang / tongBuoiHoc * 100 >= 20) {
+        alert("buộc phải chuyển lớp");
+    } else if (vang / tongBuoiHoc * 100 >= 10) {
+        alert(" gửi mail warning");
+    }
+</script>
 </body>
 </html>
