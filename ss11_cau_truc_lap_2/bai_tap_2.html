@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let tuoiCha;
+    let tuoiCon;
+    let count = 0;
+    do {
+        tuoiCha = +prompt("nhập tuổi Cha");
+        tuoiCon = +prompt("nhập tuổi con");
+    } while (tuoiCha - tuoiCon !== 25);
+    while (tuoiCha / tuoiCon !== 2) {
+        tuoiCha++;
+        tuoiCon++;
+        count++;
+    }
+    alert("Số năm để tuổi con bằng 1/2 tuổi cha là:" + count);
+
+
+</script>
+</body>
+</html>

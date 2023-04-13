@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--// // Cho dãy số vô hạn 50,51,53,56,60,...-->
+<!--// // In ra số thứ 2023 của dãy.-->
+<!--// // Ví dụ: Số thứ 2 của dãy: 51-->
+</body>
+<SCRIPT>
+    let n = +prompt("nhap vao so thư y");
+    arr = [];
+    let num = 50;
+    let varible;
+    for (let i = 0; i < n; i++) {
+        arr.push(num);
+        varible = i + 1;
+        num = num + varible;
+    }
+    alert(arr[n - 1]);
+
+</SCRIPT>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let tuoiCha, tuoiCon;
+    let count = 0;
+    do {
+        tuoiCha = prompt("Nhập tuổi Cha");
+        tuoiCon = prompt("Nhập tuổi con");
+    } while (tuoiCha - tuoiCon !== 25);
+    while (tuoiCha / tuoiCon !== 2) {
+        tuoiCha++;
+        tuoiCon++;
+        count++;
+    }
+    alert(count);
+
+</script>
+</body>
+</html>
