@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = []
+    let n = +prompt("nhap so luong phan tu");
+    for (let i = 0; i < n; i++) {
+        let phanTu = +prompt("nhap phan tu thu" + i)
+        arr.push(phanTu);
+    }
+    // let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    let arr1 = [];
+    let arr2 = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 === 0) {
+            arr1.push(arr[i]);
+        } else {
+            arr2.push(arr[i]);
+        }
+    }
+    alert(arr1);
+    alert(arr2);
+    if (arr1.length === arr2.length) {
+        alert("ok");
+    } else {
+        alert("no");
+    }
+</script>
+</body>
+</html>
