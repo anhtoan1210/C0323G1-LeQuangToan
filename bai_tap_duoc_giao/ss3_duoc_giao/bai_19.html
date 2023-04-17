@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let string = prompt("nhập chuỗi kí tự để kiểm tra");
+
+    function kiemTraInHoa(string) {
+        let arr = [];
+        let arr1 = ["A", "B", "C", "D", "F", "G", "H", "J", "K", "L", "Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P",
+            "Z", "X",  "V", "B", "N", "M"];
+        for (let j = 0; j < arr1.length; j++) {
+            for (let i = 0; i < string.length; i++) {
+                if (string[i] === arr1[j]) {
+                    arr.push(string[i]);
+                }
+            }
+        }
+        return arr;
+    }
+
+    alert(kiemTraInHoa(string));
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let arr = []; // 10 so
+    // do {
+    //     let n = +prompt("nhập độ dài của mảng");
+    //     if (arr.indexOf(n) === -1) {
+    //         arr.push(n);
+    //         break;
+    //     } else if (arr.indexOf(n) === 1) {
+    //
+    //     }
+    //
+    // } while (arr.length <= 10);
+    let n = +prompt("Nhập vào số lượng phần tử ");
+    // let count = 0;
+    let arr = [];
+    for (let i = 0; i < n; i++) {
+        do {
+            arr[i] = +prompt("Nhập phần tử thứ " + (i + 1) + " : ");
+        }
+        while (!kiemTraArr(arr, i));
+    }
+
+    function kiemTraArr(arr, i) {
+        for (let j = 0; j < i; j++) {
+            if (arr[i] === arr[j]) {
+                return false;
+
+            }
+        }
+        return true;
+    }
+</script>
+</body>
+</html>

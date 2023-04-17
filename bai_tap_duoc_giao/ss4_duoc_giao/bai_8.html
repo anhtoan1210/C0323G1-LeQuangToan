@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt("nhập số lượng phần tử của mảng");
+    let arr = [];
+    for (let i = 0; i < n; i++) {
+        arr[i] = +prompt("nhập phần tử thứ" + i);
+    }
+    alert(arr);
+    let max = arr[0];
+    let count = 0
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+    for (let i = 0; i < arr.length; i++) {
+        if (max === arr[i]) {
+            count++;
+        }
+    }
+    alert(max);
+    alert(count);
+</script>
+</body>
+</html>
