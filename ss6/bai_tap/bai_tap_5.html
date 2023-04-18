@@ -1,10 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+
+    let arr = [];
+    for (let i = 0; i < 6; i++) {
+        arr[i] = +prompt("nhap phần tử thứ " + i + "từ bàn phím");
+    }
+    alert(arr);
+    let flag = true;
+    for (let j = 0; j < arr.length; j += 2) {
+        if (arr[j] > arr[j + 1]) {
+            flag = false;
+        }
+    }
+    if (flag) {
+        alert("ok");
+    } else {
+        alert("no");
+    }
+
+</script>
 </body>
 </html>

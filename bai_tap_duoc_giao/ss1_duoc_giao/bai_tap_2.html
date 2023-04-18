@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = +prompt("nhap vao so a");
+    let b = +prompt("nhap vao so b");
+    let c = +prompt("nhap vao so c");
+    let nghiem1;
+    let nghiem2;
+    let denTa = b * b - 4 * a * c;
+    if (denTa < 0) {
+        alert("phuong trinh vo nghiem");
+    } else if (denTa === 0) {
+        nghiem1 = nghiem2 = -b / 2 * a
+        alert("phương trình có nghiệm kép là:" + nghiem1 + "và" + nghiem2);
+    } else {
+        nghiem1 = (-b + Math.sqrt(denTa));
+        nghiem2 = (-b + Math.sqrt(denTa));
+        alert("phương trình có 2 nghiệm phân biệt là:" + nghiem1 + "và" + nghiem2);
+    }
+</script>
+</body>
+</html>

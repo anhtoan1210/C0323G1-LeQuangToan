@@ -1,10 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
-$END$
+<p id="display"></p>
+<script>
+    let array = new Array(10);
+    for (let i = 0; i < array.length; i++) {
+        array[i] = new Array(10);
+        for (let j = 0; j < array[i].length; j++) {
+            array[i][j] = "";
+        }
+    }
+    let checkPalayer1 = true;
+    display();
+
+    function play(i, j) {
+        if (checkPalayer1 && !checkData(i, j)) {
+            array[i][j] = "X";
+            checkPalayer1 = false;
+        } else if (!checkPalayer1 && !checkData(i, j)) {
+            array[i][j] = "O";
+            checkPalayer1 = true;
+        }
+        display();
+    }
+
+    function checkData(i, j) {
+        if (array[i][j] == "X" || array[i][j] == "O") {
+            alert("Ô này đánh rồi!!!!");
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    function display() {
+        let tableString = '<table border="1">';
+        for (let i = 0; i < array.length; i++) {
+            tableString += ' <tr>';
+            for (let j = 0; j < array[i].length; j++) {
+                tableString += '<td onclick="play(' + i + ',' + j + ')" style="width: 25px;height: 25px;">' + array[i][j] + '</td>'
+            }
+            tableString += ' </tr>';
+        }
+        tableString += '</table>'
+        document.getElementById("display").innerHTML = tableString;
+    }
+
+</script>
 </body>
 </html>
