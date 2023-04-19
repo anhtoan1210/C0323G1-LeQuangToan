@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = +prompt("nhập cạnh x");
+    let b = +prompt("nhập cạnh y");
+    let c = +prompt("nhập cạnh z");
+
+    function checkTriangle(x, y, z) {
+        if (x < y + z && y < x + z && z < x + y) {
+            if (x * x == (y * y) + (z * z) || y * y == (x * x) + (z * z) || z * z == (y * y) + (x * x)) {
+                alert("là cạnh của tam giác vuông");
+            } else {
+                alert("là cạnh của tam giác");
+            }
+        } else {
+            alert("không phải là cạnh của tam giác");
+        }
+    }
+
+    checkTriangle(a, b, c);
+
+</script>
+</body>
+</html>
