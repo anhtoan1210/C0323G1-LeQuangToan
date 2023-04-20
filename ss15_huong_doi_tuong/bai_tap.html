@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table id="bang" border="1">
+    <!--    <button type="button" onclick="">gui tien</button>-->
+    <!--    <button type="button" onclick="">rut tien</button>-->
+    <!--    <button type="button" onclick="">them khach hang</button>-->
+    <!--    <button type="button" onclick="">xoa khach hang</button>-->
+</table>
+<script>
+    class NganHangAcb {
+        constructor(stt, soTaiKhoan, tenTaiKhoan, soTienTrongTaiKhoan) {
+            this.stt = stt;
+            this.soTaiKhoan = soTaiKhoan;
+            this.tenTaiKhoan = tenTaiKhoan;
+            this.soTienTrongTaiKhoan = soTienTrongTaiKhoan;
+
+        }
+
+        getStt() {
+            return this.stt;
+        }
+
+        getSoTaiKhoan() {
+            return this.soTaiKhoan;
+        }
+
+        getTenTaiKhoan() {
+            return this.tenTaiKhoan;
+        }
+
+        getSoTienTrongTaiKhoan() {
+            return this.soTienTrongTaiKhoan;
+        }
+
+
+        setStt(stt) {
+            this.stt = stt;
+        }
+
+        setSoTaiKhoan(soTaiKhoan) {
+            this.soTaiKhoan = soTaiKhoan;
+        }
+
+        setTenTaiKhoan(tenTaiKhoan) {
+            this.tenTaiKhoan = tenTaiKhoan;
+        }
+
+        setSoTienTrongTaiKhoan(soTienTrongTaiKhoan) {
+            this.soTienTrongTaiKhoan = soTienTrongTaiKhoan;
+        }
+
+    }
+
+    let napTien = new NganHangAcb("1", "012345678", "lequangtoan", "1000000000000");
+    let rutTien = new NganHangAcb("2", "012345678", "lequangtoan", "100");
+    let quanLyTien = [napTien, rutTien];
+
+    function hienThiBang() {
+        let bang = `<tr>
+                        <th>Stt</th>
+                        <th>so tai khoan</th>
+                        <th>ten tai khoan</th>
+                        <th>so tien trong tai khoan</th>
+                   </tr>`
+        for (let i = 0; i < quanLyTien.length; i++) {
+            bang += `<tr>
+                          <td>${quanLyTien[i].getStt()}</td>
+                          <td>${quanLyTien[i].getSoTaiKhoan()}</td>
+                          <td>${quanLyTien[i].getTenTaiKhoan()}</td>
+                          <td>${quanLyTien[i].getSoTienTrongTaiKhoan()}</td>
+                     </tr>`
+        }
+        document.getElementById("bang").innerHTML = bang;
+
+    }
+
+    hienThiBang();
+</script>
+</body>
+</html>
