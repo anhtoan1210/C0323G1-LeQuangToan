@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2></h2>
+
+
+<script>
+    // Bài 4: Giả sử menu của chúng ta có các loại thức uống như sau:
+    //     Cafe
+    // Cam vắt
+    // Nước ép cà rốt
+    // Nước ép cà chua
+    // Nước lọc
+    // Nước dừa
+    // Viết một chương trình gọi thức uống đơn giản.
+    //     Gợi ý: Trước tiên in ra màn hinh danh sách các loại thức uống cho người dùng chọn lựa
+    // Đánh dấu theo thứ tự 1 (cafe), 2 (cam vắt), 3(nước ép cà rốt), 4(nước ép cà chua), 5(nước lọc),
+    // 6(nước dừa), 7(thoát gọi món)
+    // Khi người dùng lựa chọn 1 trong số các thức uống, chương trình sẽ hiện đơn giá của thức uống đó
+    // và cho phép
+    //người dùng nhập số lượng. Cuối cùng hiển thị tổng số tiền người dùng cần phải trả.
+    //Sử dụng vòng lặp do while lặp lại cho người dùng đặt thức uống, kết thúc quá trình đặt thức uống
+    // khi người nhấn số 7
+    // let menu = ["1.Cafe", "2.cam vắt", "3.nước ép cà rốt", "4.nước ép cà chua",
+    //     "5.nước lọc", "6.nước dừa", "7.thoát gọi món"];
+    // alert(menu);
+
+    do {
+        var oder = +prompt("nhập món mà bạn muốn uống tương ứng trên menu1.Cafe, 2.cam vắt, 3.nước ép cà rốt, " +
+            "4.nước ép cà chua,5.nước lọc,6.nước dừa,7.thoát gọi món");
+
+        switch (oder) {
+            case 1:
+                alert("Cafe có giá 15.000đ");
+                let n = +prompt("mời bạn nhập số lượng");
+                alert("tổng tiền là :" + (15000 * n) + "đ");
+                break;
+        }
+        switch (oder) {
+            case 2:
+                alert("cam vắt có giá 25.000đ");
+                let n = +prompt("mời bạn nhập số lượng");
+                alert("tổng tiền là :" + (25000 * n) + "đ");
+                break;
+        }
+        switch (oder) {
+            case 3:
+                alert(" Nước ép cà rốt có giá 20.000đ");
+                let n = +prompt("mời bạn nhập số lượng");
+                alert("tổng tiền là :" + (20000 * n) + "đ");
+                break;
+        }
+        switch (oder) {
+            case 4:
+                alert("Nước ép cà chua có giá 25.000đ");
+                let n = +prompt("mời bạn nhập số lượng");
+                alert("tổng tiền là :" + (25000 * n) + "đ");
+                break;
+        }
+        switch (oder) {
+            case 5:
+                alert("Nước lọc có giá 300.000đ");
+                let n = +prompt("mời bạn nhập số lượng");
+                alert("tổng tiền là :" + (300000 * n) + "đ");
+                break;
+        }
+        switch (oder) {
+            case 6:
+                alert("nước dừa có giá 20.000đ");
+                let n = +prompt("mời bạn nhập số lượng");
+                alert("tổng tiền là :" + (20000 * n) + "đ")
+                break;
+        }
+    } while (oder !== 7);
+
+
+</script>
+</body>
+</html>
