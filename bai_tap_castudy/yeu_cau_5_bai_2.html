@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Bài 2: Viết hàm liệt kê các số nguyên tố trong mảng 2 chiều, đếm các số nguyên tố có trong mảng đó.
+    let n = +prompt("nhập số hàng");
+    let m = +prompt("nhập số cột");
+    kiemTra(n,m);
+    function kiemTra(n, m) {
+        let arr = new Array(n);
+        for (let i = 0; i < n; i++) {
+            arr[i] = new Array(m);
+            for (let j = 0; j < arr[i].length; j++) {
+                arr[i][j] = +prompt("nhập phần tử thứ " + i + "" + j);
+            }
+
+        }
+        alert(arr);
+        let count = 0;
+        let arr2 = [];
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                if (kiemTraSoNguyenTo(arr[i][j]) === true) {
+                    arr2.push(arr[i][j]);
+                    count++;
+                }
+
+            }
+
+        }
+        alert(arr2);
+        alert(count);
+
+        function kiemTraSoNguyenTo(num) {
+            let flag = true;
+            if (num < 2) {
+                return false;
+            } else {
+                for (let i = 2; i < num; i++) {
+                    if (num % i === 0) {
+                        return false;
+                    }
+                }
+            }
+            if (flag) {
+                return true;
+            }
+        }
+
+    }
+
+</script>
+</body>
+</html>

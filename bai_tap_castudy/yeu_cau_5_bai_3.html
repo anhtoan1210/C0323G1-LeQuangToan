@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt("nhập số hàng");
+    let m = +prompt("nhập số cột");
+    let arr = new Array(n);
+    for (let i = 0; i < n; i++) {
+        arr[i] = new Array(m);
+        for (let j = 0; j < arr[i].length; j++) {
+            arr[i][j] = +prompt("nhập phần tử thứ" + i + "" + j);
+        }
+    }
+    alert(arr);
+    kiemTraMax(arr);
+
+    function kiemTraMax(arr) {
+        let max = 0;
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                if (arr[i][j] > max) {
+                    max = arr[i][j];
+                }
+            }
+        }
+        alert("Phần tử lớn nhất là: "+max);
+    }
+    kiemTraMin(arr)
+    function kiemTraMin(arr) {
+        let min = arr[0][0];
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                if (arr[i][j] < min) {
+                    min = arr[i][j];
+                }
+            }
+        }
+        alert("phần tử bé nhất là: "+min);
+
+    }
+
+
+    // let min = 0;
+    // for (let i = 0; i < arr.length; i++) {
+    //     for (let j = 0; j < arr[i].length; j++) {
+    //         if (arr[i][j] < min) {
+    //             min = arr[i][j];
+    //         }
+    //     }
+    //
+    // }
+    // alert(min);
+</script>
+</body>
+</html>

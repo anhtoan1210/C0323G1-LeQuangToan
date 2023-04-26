@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Bài 1: Viết hàm tính tổng các số chẵn trong ma trận có kích thước m*n.
+    //     Với m, n là các số nhập từ bàn phím.
+    let a = +prompt("nhập số hàng");
+    let b = +prompt("nhập số cột");
+    function tinhTong(n,m) {
+        let arr = new Array(n);
+        for (let i = 0; i < n; i++) {
+            arr[i] = new Array(m);
+            for (let j = 0; j < arr[i].length; j++) {
+                arr[i][j] = +prompt("nhập phần tử thứ " + i + "và" + j)
+            }
+
+        }
+        alert(arr);
+        let tong = 0
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                if (arr[i][j] % 2 === 0) {
+                    tong += arr[i][j];
+                }
+            }
+
+        }
+        alert(tong);
+    }
+    tinhTong(a,b);
+</script>
+</body>
+</html>
