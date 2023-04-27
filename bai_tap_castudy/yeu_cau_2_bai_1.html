@@ -6,10 +6,11 @@
 </head>
 <body>
 <script>
+
     for (let i = 0; i <= 5; i++) {
         for (let j = 0; j <= 5; j++) {
-            if (i == j || j == 0 || i == 5) {
-                document.write("*");
+            if (j === 0 || i === 5 || i === j) {
+                document.write("*")
             } else {
                 document.write("&nbsp&nbsp");
             }

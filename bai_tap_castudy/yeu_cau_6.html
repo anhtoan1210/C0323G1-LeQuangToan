@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" onclick="them()" value="Thêm học viên">
+<input type="button" onclick="xoa()" value="Xoá học viên">
+<table id="bang" border="1">
+
+</table>
+<script>
+    class Hocsinh {
+        constructor(maHocVien, ten, lop, email, ngaySinh, module) {
+            this.maHocVien = maHocVien;
+            this.ten = ten;
+            this.lop = lop;
+            this.email = email;
+            this.ngaySinh = ngaySinh;
+            this.module = module;
+        }
+
+
+        getMaHocVien() {
+            return this.maHocVien;
+        }
+
+        getTen() {
+            return this.ten;
+        }
+
+        getLop() {
+            return this.lop;
+        }
+
+        getEmail() {
+            return this.email;
+        }
+
+        getNgaySinh() {
+            return this.ngaySinh;
+        }
+
+        getModule() {
+            return this.module;
+        }
+
+        setMaHocVien(value) {
+            this.maHocVien = value;
+        }
+
+        setTen(value) {
+            this.ten = value;
+        }
+
+        setLop(value) {
+            this.lop = value;
+        }
+
+        setEmail(value) {
+            this.email = value;
+        }
+
+        setNgaySinh(value) {
+            this.ngaySinh = value;
+        }
+
+        setModule(value) {
+            this.module = value;
+        }
+    }
+
+    let hocSinh1 = new Hocsinh("001", "Lê Quang Toản", "c03", "không dùng", "12/10/2003", "6");
+    let hocSinh2 = new Hocsinh("002", "Lê Quang Toản", "c03", "không dùng", "12/10/2004", "5");
+    let hocSinh3 = new Hocsinh("003", "Lê Quang Toản", "c03", "không dùng", "12/10/2005", "4");
+    let quanLyHocSinh = [hocSinh1, hocSinh2, hocSinh3];
+
+    function them() {
+        let maHocVien = prompt("nhập mã");
+        let ten = prompt("nhập tên");
+        let lop = prompt("nhập lớp");
+        let email = prompt("nhập email");
+        let ngaySinh = prompt("nhập ngày sinh");
+        let module = prompt("nhập module");
+        let quanLy = new Hocsinh(maHocVien, ten, lop, email, ngaySinh, module);
+        quanLyHocSinh.push(quanLy);
+        hienThiBang();
+
+    }
+
+    function xoa() {
+        let nhapId = prompt("nhập id bạn muốn xoá");
+        let flag = false;
+        let index = 0;
+        for (let i = 0; i < quanLyHocSinh.length; i++) {
+            if (nhapId === quanLyHocSinh[i].maHocVien) {
+                flag = true;
+                index = i;
+                break;
+            }
+        }if(flag){
+            let conf = confirm("chắc chưa pro");
+            if (conf) {
+                quanLyHocSinh.splice(index, 1);
+            }
+        } else {
+            alert("id không tồn tại");
+        }
+        hienThiBang();
+    }
+
+    function hienThiBang() {
+        let bang = `<tr>
+<td>Mã học sinh</td>
+<td>Tên</td>
+<td>lớp</td>
+<td>Mail</td>
+<td>Ngày sinh</td>
+<td>Module</td>
+</tr>`
+
+
+        for (let i = 0; i < quanLyHocSinh.length; i++) {
+            bang += `<tr>
+<td>${quanLyHocSinh[i].getMaHocVien()}</td>
+<td>${quanLyHocSinh[i].getTen()}</td>
+<td>${quanLyHocSinh[i].getLop()}</td>
+<td>${quanLyHocSinh[i].getEmail()}</td>
+<td>${quanLyHocSinh[i].getNgaySinh()}</td>
+<td>${quanLyHocSinh[i].getModule()}</td>
+</tr>`
+        }
+        document.getElementById("bang").innerHTML = bang;
+    }
+
+    hienThiBang();
+
+</script>
+</body>
+</html>
