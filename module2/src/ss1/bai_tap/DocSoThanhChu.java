@@ -82,20 +82,20 @@ public class DocSoThanhChu {
                     ;
                     break;
                 case 4:
-                    System.out.println("fourty");
+                    System.out.println("bốn mươi");
                     break;
                 case 5:
-                    System.out.println("fivety");
+                    System.out.println("năm muoươi");
                     break;
                 case 6:
-                    System.out.println("sixty");
+                    System.out.println("sáu mươi");
                     break;
                 case 7:
-                    System.out.println("seventy");
+                    System.out.println("bảy mươi");
                 case 8:
-                    System.out.println("eightty");
+                    System.out.println("tám mươi");
                 case 9:
-                    System.out.println("ninety");
+                    System.out.println("chín mươi");
             }
         }
     }
