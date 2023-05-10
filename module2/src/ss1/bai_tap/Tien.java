@@ -6,11 +6,12 @@ public class Tien {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("nhập số tiền cần đổi");
-        int tienViet = 23000;
+        int tyLe = 23000;
         int doLa;
         doLa = Integer.parseInt(scanner.nextLine());
-        int quyDoi = doLa * tienViet;
+        int tienViet = doLa * tyLe;
 
-        System.out.println("số tiền sau khi quy đỏi là"+quyDoi);
+        System.out.println("số tiền sau khi quy đỏi là"+tienViet);
     }
 }
+
