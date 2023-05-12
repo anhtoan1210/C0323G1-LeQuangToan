@@ -5,17 +5,17 @@ public class StopWatch {
     private long endTime;
 
     public StopWatch() {
-        this.startTime =System.currentTimeMillis();
+        this.startTime = System.currentTimeMillis();
     }
 
-    public long start() {
+    public void start() {
         startTime = System.currentTimeMillis();
-        return startTime;
+        System.out.println(startTime);
     }
 
-    public long stop() {
+    public void stop() {
         endTime = System.currentTimeMillis();
-        return endTime;
+        System.out.println(endTime);
     }
 
     public long getElapsedTime() {
