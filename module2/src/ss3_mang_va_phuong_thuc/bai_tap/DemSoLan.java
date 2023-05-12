@@ -11,8 +11,9 @@ public class DemSoLan {
         kiTu = scanner.next().charAt(0);
         int dem = 0;
         for (int i = 0; i < chuoi.length(); i++) {
-            if (kiTu == chuoi.charAt(i)) ;
-            dem++;
+            if (chuoi.charAt(i) == kiTu) {
+                dem++;
+            }
         }
         System.out.println("kí tự" + kiTu + "xuất hiện số lần là" + dem);
     }
