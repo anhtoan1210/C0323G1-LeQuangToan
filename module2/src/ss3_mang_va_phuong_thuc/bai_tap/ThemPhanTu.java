@@ -16,7 +16,7 @@ public class ThemPhanTu {
             }
         }
         int temp;
-        for (int i = mang.length-1; i>0; i--) {
+        for (int i = mang.length-1; i>viTri; i--) {
            mang[i]=mang[i-1];
         }
         mang[viTri]=x;

@@ -1,2 +1,19 @@
-package ss3_mang_va_phuong_thuc.bai_tap;public class DemSoLan {
+package ss3_mang_va_phuong_thuc.bai_tap;
+
+import java.util.Scanner;
+
+public class DemSoLan {
+    public static void main(String[] args) {
+        String chuoi = "Le Quang Toản";
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("nhập kí tự cần  kiểm tra");
+        char kiTu;
+        kiTu = scanner.next().charAt(0);
+        int dem = 0;
+        for (int i = 0; i < chuoi.length(); i++) {
+            if (kiTu == chuoi.charAt(i)) ;
+            dem++;
+        }
+        System.out.println("kí tự" + kiTu + "xuất hiện số lần là" + dem);
+    }
 }

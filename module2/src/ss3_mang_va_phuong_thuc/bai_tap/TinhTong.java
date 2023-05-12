@@ -24,11 +24,7 @@ public class TinhTong {
         viTri = scanner.nextInt();
         int tong = 0;
         for (int i = 0; i < soLuong; i++) {
-            if (viTri == i) {
-                for (int j = 0; j < mang.length; j++) {
-                    tong = tong+ mang[i][j];
-                }
-            }
+            tong = tong + mang[i][viTri];
         }
         System.out.println("cot" + viTri + "có tổng là:" + tong);
     }
