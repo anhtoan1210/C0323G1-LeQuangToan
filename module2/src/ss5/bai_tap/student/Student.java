@@ -9,13 +9,6 @@ public class Student {
         this.classes = "c03";
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public String getClasses() {
-        return classes;
-    }
 
     void setName(String name) {
         this.name = name;
