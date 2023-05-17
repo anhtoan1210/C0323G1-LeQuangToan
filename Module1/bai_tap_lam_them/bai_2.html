@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = "9 / 3";
+    find(str);
+
+    function find(string) {
+        let flag = true;
+        if (str.indexOf("/") === -1) {
+            alert("không phải là phân sô");
+        } else {
+            let arr = str.split("/");
+            if (arr.length !== 2 || arr[0] % 1 !== 0 || arr[1] % 1 !== 0 || arr[1] == 0) {
+                alert("không phải là phân sô");
+            } else {
+                for (let i = arr[0]; i >= 0; i--) {
+                    if (arr[0] % i === 0 && arr[1] % i === 0) {
+                        alert(arr[0] / i + "/" + arr[1] / i);
+                        flag = false;
+                        break;
+                    }
+
+                }
+            }
+        }
+        if (flag) {
+            alert(arr[0] + "/" + arr[1]);
+        }
+
+    }
+
+    // let str = "22/11";
+    // find(str);
+    // function find(string) {
+    //     let flag = true;
+    //     if (str.indexOf("/") === -1) {
+    //         alert("không phải phân số");
+    //     } else {
+    //         let arr = str.split("/");
+    //         if (arr.length !== 2||arr[0] % 1 !== 0 || arr[1] % 1 !== 0||arr[1] == 0) {
+    //             alert("không phải phân số");
+    //         } else {
+    //             for (let i = arr[0]; i >= 0; i--) {
+    //                 if (arr[0] % i === 0 && arr[1] % i === 0) {
+    //                     alert(arr[0] / i + "/" + arr[1] / i);
+    //                     flag = false;
+    //                     break;
+    //                 }
+    //             }
+    //         }
+    //
+    //     }
+    //     if (flag) {
+    //         alert(arr[0] + "/" + arr[1]);
+    //     }
+    // }
+</script>
+</body>
+</html>

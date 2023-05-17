@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [2, 3, 4, 5, 7, 0];
+
+    function kiemTra(arr) {
+        let flag = true;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] * 1 !== arr[i]) {
+                flag = false;
+            }
+        }
+        if (flag) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    alert(kiemTra(arr));
+</script>
+</body>
+</html>

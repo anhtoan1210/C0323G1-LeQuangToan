@@ -1,4 +1,4 @@
-package ss7.colorable;
+package src.ss7.colorable;
 
 public interface Colorable {
     void howToColor();

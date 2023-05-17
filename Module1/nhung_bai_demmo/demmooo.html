@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let arr =["A","b",3,4,5,6];
+    // for (let arrKey in arr) {
+    //     console.log(arr[arrKey])
+    // }
+    // let arr=["a","b","c"];
+    // for (let number of arr) {
+    //     console.log(number)
+    // }
+    class MayTinh {
+        constructor(maMay, tenMay, tenHang, giaBan) {
+            this.maMay = maMay;
+            this.tenMay = tenMay;
+            this.tenHang = tenHang;
+            this.giaBan = giaBan;
+        }
+
+
+        getMaMay() {
+            return this.maMay;
+        }
+
+        getTenMay() {
+            return this.tenMay;
+        }
+
+        getTenHang() {
+            return this.tenHang;
+        }
+
+        getGiaBan() {
+            return this.giaBan;
+        }
+
+        setMaMay(value) {
+            this.maMay = value;
+        }
+
+        setTenMay(value) {
+            this.tenMay = value;
+        }
+
+        setTenHang(value) {
+            this.tenHang = value;
+        }
+
+        setGiaBan(value) {
+            this.giaBan = value;
+        }
+    }
+
+    let mayTinh1 = new MayTinh("01", "delljs", "dell", "12");
+    let mayTinh2 = new MayTinh("01", "hp", "hp", "15");
+</script>
+</body>
+</html>
