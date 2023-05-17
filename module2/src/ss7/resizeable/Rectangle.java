@@ -51,9 +51,12 @@ public class Rectangle extends Shape implements Resizeable {
                 + ", which is a subclass of "
                 + super.toString();
     }
+
     @Override
     public void resize(double percent) {
-        double area=getArea()+(getArea()*percent/100);
-        System.out.println("Diện tích sau khi tăng phần trăm: "+area);
+        double width = getWidth() + (getWidth() * percent / 100);
+        System.out.println("chiều rộng sau khi thay đổi: " + width);
+        double length =getLength()+(getLength()*percent/100);
+        System.out.println("sau khi tăng là"+length);
     }
 }

@@ -4,7 +4,7 @@ import ss7.resizeable.Resizeable;
 import ss7.resizeable.Shape;
 
 public class Square extends Shape implements Resizeable {
-    double edge;
+   private double edge;
 
     public Square(double edge) {
         this.edge = edge;
@@ -28,7 +28,7 @@ public class Square extends Shape implements Resizeable {
 
     @Override
     public void resize(double percent) {
-        double area = getArea()+(getArea()*percent/100);
-        System.out.println("trước: "+getArea()+"sau: "+area);
+        double edge = getEdge()+(getEdge()*percent/100);
+        System.out.println("trước: "+getArea()+"sau: "+edge);
     }
 }
