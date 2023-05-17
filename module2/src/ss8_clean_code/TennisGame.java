@@ -61,6 +61,6 @@ public class TennisGame {
     }
 
     public static void main(String[] args) {
-        System.out.println(getScore("AAA", "BBB", 4, 4));
+        System.out.println(getScore("lê văn A", "Hoàng Thị B", 4, 4));
     }
 }
