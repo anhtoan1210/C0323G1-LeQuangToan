@@ -5,22 +5,22 @@ public class TennisGame {
     public static String getScore(String playerName1, String playerName2, int scoreOffirstPlayer, int scoreOfsecondPlayer) {
         String score = "";
         int tempScore = 0;
-        final int point_One = 0;
-        final int point_two = 1;
-        final int point_three = 2;
-        final int point_four = 3;
+        final int point_One = 1;
+        final int point_two = 2;
+        final int point_three = 3;
+        final int point_four = 4;
         if (scoreOffirstPlayer == scoreOfsecondPlayer) {
             switch (scoreOffirstPlayer) {
-                case 0:
+                case point_One:
                     score = "Love-All";
                     break;
-                case 1:
+                case point_two:
                     score = "Fifteen-All";
                     break;
-                case 2:
+                case point_three:
                     score = "Thirty-All";
                     break;
-                case 3:
+                case point_four:
                     score = "Forty-All";
                     break;
                 default:
@@ -42,16 +42,16 @@ public class TennisGame {
                     tempScore = scoreOfsecondPlayer;
                 }
                 switch (tempScore) {
-                    case 0:
+                    case point_One:
                         score += "Love";
                         break;
-                    case 1:
+                    case point_two:
                         score += "Fifteen";
                         break;
-                    case 2:
+                    case point_three:
                         score += "Thirty";
                         break;
-                    case 3:
+                    case point_four:
                         score += "Forty";
                         break;
                 }
