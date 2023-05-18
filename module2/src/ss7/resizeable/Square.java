@@ -28,7 +28,15 @@ public class Square extends Shape implements Resizeable {
 
     @Override
     public void resize(double percent) {
-        double edge = getEdge()+(getEdge()*percent/100);
-        System.out.println("trước: "+getArea()+"sau: "+edge);
+        this.edge = getEdge()+(getEdge()*percent/100);
+
+    }
+
+    @Override
+    public String toString() {
+        return "Square{" +
+                "edge=" + edge +
+                "area=" + getArea() +
+                '}';
     }
 }
