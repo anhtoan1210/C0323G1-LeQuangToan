@@ -5,22 +5,22 @@ public class TennisGame {
     public static String getScore(String playerName1, String playerName2, int scoreOffirstPlayer, int scoreOfsecondPlayer) {
         String score = "";
         int tempScore = 0;
-        final int point_One = 1;
-        final int point_two = 2;
-        final int point_three = 3;
-        final int point_four = 4;
+        final int POINT_ONE = 1;
+        final int POINT_TWO = 2;
+        final int POINT_THREE = 3;
+        final int POINT_FOR = 4;
         if (scoreOffirstPlayer == scoreOfsecondPlayer) {
             switch (scoreOffirstPlayer) {
-                case point_One:
+                case POINT_ONE:
                     score = "Love-All";
                     break;
-                case point_two:
+                case POINT_TWO:
                     score = "Fifteen-All";
                     break;
-                case point_three:
+                case POINT_THREE:
                     score = "Thirty-All";
                     break;
-                case point_four:
+                case POINT_FOR:
                     score = "Forty-All";
                     break;
                 default:
@@ -29,11 +29,7 @@ public class TennisGame {
 
             }
         } else if (scoreOffirstPlayer >= 4 || scoreOfsecondPlayer >= 4) {
-            int minusResult = scoreOffirstPlayer - scoreOfsecondPlayer;
-            if (minusResult == 1) score = "Advantage player1";
-            else if (minusResult == -1) score = "Advantage player2";
-            else if (minusResult >= 2) score = "Win for player1";
-            else score = "Win for player2";
+            score = getAdvantage(scoreOffirstPlayer, scoreOfsecondPlayer);
         } else {
             for (int i = 1; i < 3; i++) {
                 if (i == 1) tempScore = scoreOffirstPlayer;
@@ -42,21 +38,31 @@ public class TennisGame {
                     tempScore = scoreOfsecondPlayer;
                 }
                 switch (tempScore) {
-                    case point_One:
+                    case POINT_ONE:
                         score += "Love";
                         break;
-                    case point_two:
+                    case POINT_TWO:
                         score += "Fifteen";
                         break;
-                    case point_three:
+                    case POINT_THREE:
                         score += "Thirty";
                         break;
-                    case point_four:
+                    case POINT_FOR:
                         score += "Forty";
                         break;
                 }
             }
         }
+        return score;
+    }
+
+    private static String getAdvantage(int scoreOffirstPlayer, int scoreOfsecondPlayer) {
+        String score;
+        int minusResult = scoreOffirstPlayer - scoreOfsecondPlayer;
+        if (minusResult == 1) score = "Advantage player1";
+        else if (minusResult == -1) score = "Advantage player2";
+        else if (minusResult >= 2) score = "Win for player1";
+        else score = "Win for player2";
         return score;
     }
 

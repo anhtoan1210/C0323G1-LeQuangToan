@@ -1,2 +1,7 @@
-package ss9.mylist;public class Test {
+package ss9.mylist;
+
+public class Test {
+    public static void main(String[] args) {
+
+    }
 }
