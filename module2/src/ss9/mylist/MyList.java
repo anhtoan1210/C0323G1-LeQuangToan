@@ -45,6 +45,23 @@ public class MyList<E> {
         }
         return (E)elements;
     }
+    private int size() {
+        return size;
+    }
+
+    public E clone() {
+        Object[] newArr = Arrays.copyOf(elements, elements.length);
+        return (E) newArr;
+    }
+
+    public boolean contains(E o) {
+        for (int i = 0; i < elements.length; i++) {
+            if (o == elements[i]) {
+                return true;
+            }
+        }
+        return false;
+    }
 
 
 }
