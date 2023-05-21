@@ -5,16 +5,16 @@ import java.util.Stack;
 public class Reverse {
     public static void main(String[] args) {
         Stack<Integer> stack = new Stack<>();
-        int[] a = {1, 2, 3, 4, 5};
-        for (int i = 0; i < a.length; i++) {
-            stack.push(a[i]);
+        int[] arr = {1, 2, 3, 4, 5};
+        for (int i = 0; i < arr.length; i++) {
+            stack.push(arr[i]);
         }
         System.out.println(stack);
-        for (int i = 0; i < a.length; i++) {
-            a[i] = stack.pop();
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = stack.pop();
         }
-        for (int i = 0; i < a.length; i++) {
-            stack.push(a[i]);
+        for (int i = 0; i < arr.length; i++) {
+            stack.push(arr[i]);
         }
         System.out.println("các phần tử sau khi đảo ngược là" + stack);
         String str = "abcdefgh";

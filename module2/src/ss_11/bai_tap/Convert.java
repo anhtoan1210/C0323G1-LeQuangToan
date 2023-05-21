@@ -5,14 +5,14 @@ import java.util.Stack;
 public class Convert {
     public static void main(String[] args) {
         Stack<Integer> stack = new Stack<>();
-        int a = 30;
-        while (a != 0) {
-            stack.push(a % 2);
-            a = a / 2;
+        int num = 30;
+        while (num != 0) {
+            stack.push(num % 2);
+            num = num / 2;
         }
         System.out.println(stack);
-        int b = stack.size();
-        for (int i = 0; i < b; i++) {
+        int number = stack.size();
+        for (int i = 0; i < number; i++) {
             System.out.print(+stack.pop());
         }
     }
