@@ -16,5 +16,9 @@ public interface IProductRepository {
 
     int getIndexById(String id);
 
-    void editProduct(int index,Product product);
+    void editProduct(int index, Product product);
+
+    List<Product> searchName(String name);
+
+    List<Product> sortUpPrice(List<Product> productList);
 }

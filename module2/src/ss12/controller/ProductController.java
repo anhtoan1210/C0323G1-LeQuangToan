@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class ProductController {
     private static Scanner scanner = new Scanner(System.in);
-   private static IProductService productService = new ProductService();
+    private static IProductService productService = new ProductService();
 
     public void showMenu() {
 
@@ -35,8 +35,10 @@ public class ProductController {
                     productService.display();
                     break;
                 case 5:
+                    productService.search();
                     break;
                 case 6:
+                    productService.sort();
                     break;
                 case 0:
                     System.exit(1);

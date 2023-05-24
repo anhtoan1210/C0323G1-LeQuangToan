@@ -3,8 +3,7 @@ package ss12.service;
 import ss12.model.Product;
 import ss12.repository.ProductRepository;
 
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class ProductService implements IProductService {
     private ProductRepository productRepository = new ProductRepository();
@@ -68,11 +67,40 @@ public class ProductService implements IProductService {
             int quantity = Integer.parseInt(scanner.nextLine());
             System.out.print("Nhập mô tả sản phẩm: ");
             String description = scanner.nextLine();
-            Product product = new Product(products.getCodeProduct(),nameProduct, price, quantity, description);
-            productRepository.editProduct(index,product);
+            Product product = new Product(products.getCodeProduct(), nameProduct, price, quantity, description);
+            productRepository.editProduct(index, product);
 
         }
 
     }
+
+    public void search() {
+        System.out.println("nhập tên sản phẩm cần tìm");
+        String string = scanner.nextLine();
+        List<Product> products = productRepository.searchName(string);
+        for (Product p : products) {
+            System.out.println(p);
+        }
+
+    }
+
+    @Override
+    public void sort() {
+        List<Product> products = productRepository.getAll();
+        Collections.sort(products, new Comparator<Product>() {
+            @Override
+            public int compare(Product o1, Product o2) {
+                if (o1.getPrice()>o2.getPrice()){
+                    return 1;
+                }
+                return -1;
+            }
+        });
+        List<Product>productListSort=productRepository.sortUpPrice(products);
+        for (Product p:productListSort) {
+            System.out.println(p);
+        }
+    }
+
 
 }
