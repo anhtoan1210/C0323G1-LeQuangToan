@@ -25,7 +25,7 @@ public class Illustration {
             value = array[i];//Lấy phần tu ra và so sánh và chèn
             location = i;    // con trỏ đến phần tử so sánh
             while (location > 0 && value < array[location - 1]) {
-                //điều kiện để duyệt là location phải lớn hơn 0.tránh số âm.
+                //điều kiện để duyệt là location bắt đâầu từ 1.
                 array[location] = array[location - 1];// đổi chỗ từ trái sang phải
                 location--;
             }
