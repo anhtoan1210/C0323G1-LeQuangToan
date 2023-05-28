@@ -1,44 +1,43 @@
 package bai_lam_them.controller;
 
-import bai_lam_them.service.TeacherService;
+import bai_lam_them.service.StudentService;
 
 import java.util.Scanner;
 
-public class TeacherController {
-    private TeacherService teacherService = new TeacherService();
-    private Scanner scanner = new Scanner(System.in);
+public class StudentController {
+    Scanner scanner = new Scanner(System.in);
+    private StudentService studentService = new StudentService();
 
-    public void menuTeacher() {
+    public void menuStudent() {
         boolean flag = true;
         do {
-            System.out.print("1.Hiển Thị\n" +
-                    "2. Thêm\n" +
+            System.out.println("1.hiển thi\n" +
+                    "2.thêm\n" +
                     "3.xoá\n" +
                     "4. xoá đt\n" +
                     "5.thoát");
-            System.out.print("Nhập chức năng: ");
+            System.out.println("nhập chức năng");
             String choice = scanner.nextLine();
             switch (choice) {
                 case "1":
-                    teacherService.displayTeacher();
+                    studentService.displayStudent();
                     break;
                 case "2":
-                    teacherService.addTeacher();
+                    studentService.addStudent();
                     break;
                 case "3":
-                    teacherService.removeTeacher();
+                    studentService.removeStudent();
                     break;
                 case "4":
-                    teacherService.removeS();
+                    studentService.removeS();
                     break;
                 case "5":
                     flag = false;
                     break;
                 default:
-                    System.out.println("Nhập sai nhập lại");
+                    System.out.println("bạn nhập sai mời bạn nhập lại");
                     break;
             }
         } while (flag);
-
     }
 }

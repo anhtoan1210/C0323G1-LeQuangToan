@@ -5,7 +5,9 @@ import bai_lam_them.service.TeacherService;
 import java.util.Scanner;
 
 public class MenuController {
-    private TeacherService teacherService = new TeacherService();
+    private TeacherController teacherController = new TeacherController();
+    private StudentController studentController = new StudentController();
+
     public void showMenu() {
         Scanner scanner = new Scanner(System.in);
         boolean flag = true;
@@ -17,8 +19,10 @@ public class MenuController {
             String str = scanner.nextLine();
             switch (str) {
                 case "1":
+                    teacherController.menuTeacher();
                     break;
                 case "2":
+                    studentController.menuStudent();
                     break;
                 case "3":
                     flag = false;

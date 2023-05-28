@@ -33,9 +33,13 @@ public class Student extends Person {
     @Override
     public String toString() {
         return "Student{" +
-                super.toString()+
+                super.toString() +
                 ", classes='" + classes + '\'' +
                 ", point=" + point +
                 '}';
+    }
+
+    public String readAndWriteStudent() {
+        return super.getId()+","+super.getName()+","+super.getDayofbirth()+","+super.getGender()+","+this.classes+","+this.point;
     }
 }

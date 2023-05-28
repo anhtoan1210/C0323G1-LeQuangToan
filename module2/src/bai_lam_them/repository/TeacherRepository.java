@@ -21,4 +21,19 @@ public class TeacherRepository implements ITeacherRepository {
     public List<Teacher> getAll() {
         return teachersList;
     }
+
+    @Override
+    public void addTeacher(Teacher teacher) {
+        teachersList.add(teacher);
+    }
+
+    @Override
+    public void removeTeacher(int index) {
+        teachersList.remove(index);
+    }
+
+    @Override
+    public void removeS(Teacher teacher) {
+        teachersList.remove(teacher);
+    }
 }

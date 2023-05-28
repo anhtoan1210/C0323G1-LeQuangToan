@@ -6,9 +6,8 @@ import bai_lam_them.service.TeacherService;
 
 public class Main {
     public static void main(String[] args) {
-//        MenuController menuController = new MenuController();
-//        menuController.showMenu();
-        TeacherController teacherController = new TeacherController();
-        teacherController.menuTeacher();
+        MenuController menuController = new MenuController();
+        menuController.showMenu();
+
     }
 }
