@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class ProductController {
     private static Scanner scanner = new Scanner(System.in);
-    private static IProductService productService = new ProductService();
+    private static ProductService productService = new ProductService();
 
     public void showMenu() {
 
