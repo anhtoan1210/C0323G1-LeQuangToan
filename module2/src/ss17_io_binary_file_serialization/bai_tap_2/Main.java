@@ -16,7 +16,7 @@ public class Main {
         }
         System.out.println("nhập đờng link muốn gửi tới");
         String pathG = scanner.nextLine();
-        ReadAndWrite.writeListToFile(pathG,stringList);
+        ReadAndWrite.writeListToFile(pathG, stringList);
         System.out.println("ok");
     }
 
