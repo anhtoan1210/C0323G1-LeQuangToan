@@ -1,43 +1,43 @@
 package castudy.model.person;
 
-public class Employee extends Person{
-    private String level;
+public class Employee extends Person {
+    private String lerver;
     private String location;
-    private long luong;
+    private long wage;
 
     public Employee() {
     }
 
 
-    public Employee(String id, String name, String dateOfBirth, String gender, String idCode, String phoneNumber, String email, String trinhDo, String vitri, long luong) {
+    public Employee(String id, String name, String dateOfBirth, String gender, String idCode, String phoneNumber, String email, String level, String location, long wage) {
         super(id, name, dateOfBirth, gender, idCode, phoneNumber, email);
-        this.level = trinhDo;
-        this.location = vitri;
-        this.luong = luong;
+        this.lerver = level;
+        this.location = location;
+        this.wage = wage;
     }
 
-    public String getTrinhDo() {
-        return level;
+    public String getLerver() {
+        return lerver;
     }
 
-    public void setTrinhDo(String trinhDo) {
-        this.level = trinhDo;
+    public void setLerver(String lerver) {
+        this.lerver = lerver;
     }
 
-    public String getVitri() {
+    public String getLocation() {
         return location;
     }
 
-    public void setVitri(String vitri) {
-        this.location = vitri;
+    public void setLocation(String location) {
+        this.location = location;
     }
 
-    public long getLuong() {
-        return luong;
+    public long getWage() {
+        return wage;
     }
 
-    public void setLuong(long luong) {
-        this.luong = luong;
+    public void setWage(long wage) {
+        this.wage = wage;
     }
 
     @Override
@@ -120,9 +120,13 @@ public class Employee extends Person{
                 ", idCode='" + getIdCode() + '\'' +
                 ", phoneNumber='" + getPhoneNumber() + '\'' +
                 ", email='" + getEmail() + '\'' +
-                ", trinhDo='" + level + '\'' +
+                ", trinhDo='" + lerver + '\'' +
                 ", vitri='" + location + '\'' +
-                ", luong=" + luong +
+                ", luong=" + wage +
                 '}';
+    }
+
+    public String ReadAndWriteEmployee() {
+        return null;
     }
 }

@@ -1,4 +1,4 @@
 package castudy.service;
 
-public  interface IServire {
+public interface IServire {
 }

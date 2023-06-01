@@ -1,5 +1,7 @@
 package castudy.controller;
 
+import castudy.service.EmployeeService;
+
 import java.util.Scanner;
 
 public class FuramaController {
@@ -8,6 +10,7 @@ public class FuramaController {
     private static FacilityController facilityController = new FacilityController();
     private static BookingCotroller bookingCotroller = new BookingCotroller();
     private static PromotionController promotionController = new PromotionController();
+    private static EmployeeService employeeService = new EmployeeService();
 
     public void showMenu() {
         Scanner scanner = new Scanner(System.in);
