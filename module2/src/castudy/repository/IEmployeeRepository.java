@@ -9,5 +9,10 @@ public interface IEmployeeRepository extends IRepository {
 
     void addEmployee(Employee employee);
 
-    void editEmployee(int index,Employee employee);
+    Employee getById(String id);
+
+    void removeEmployee(int index);
+
+    void editEmployee(int index, Employee employee);
+    List<Employee> employeeList(String name);
 }

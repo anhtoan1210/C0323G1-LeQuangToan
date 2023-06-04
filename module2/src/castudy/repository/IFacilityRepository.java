@@ -1,4 +1,9 @@
 package castudy.repository;
 
-public interface IFacilityRepository extends IRepository{
+import castudy.model.facility.Facility;
+
+import java.util.List;
+
+public interface IFacilityRepository extends IRepository {
+    List<Facility> getAll();
 }

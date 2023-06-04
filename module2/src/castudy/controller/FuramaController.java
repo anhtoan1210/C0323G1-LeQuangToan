@@ -22,26 +22,36 @@ public class FuramaController {
                     "4.Booking Management\n" +
                     "5.Promotion Management\n" +
                     "6.Exit\n ");
-            String str = scanner.nextLine();
-            switch (str) {
-                case "1":
+            int choice;
+            while (true) {
+                try {
+                    choice = Integer.parseInt(scanner.nextLine());
+                    break;
+                } catch (NumberFormatException numberFormatException) {
+                    System.out.println("vui lòng nhập số");
+                }
+            }
+            switch (choice) {
+                case 1:
                     employeeController.showMenuEmployeeM();
                     break;
-                case "2":
+                case 2:
                     customerController.showMenuCustomer();
                     break;
-                case "3":
+                case 3:
                     facilityController.showMenuFacility();
                     break;
-                case "4":
+                case 4:
                     bookingCotroller.showMenuBooking();
                     break;
-                case "5":
+                case 5:
                     promotionController.showMenuPromotion();
                     break;
-                case "6":
+                case 6:
                     flag = false;
                     break;
+                default:
+                    System.out.println("vui lòng nhập tu 1 đến 6");
             }
 
         } while (flag);
