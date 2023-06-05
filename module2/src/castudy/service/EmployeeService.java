@@ -2,6 +2,7 @@ package castudy.service;
 
 import castudy.model.person.Employee;
 import castudy.repository.EmployeeRepository;
+import castudy.utils.Regex;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,8 +23,11 @@ public class EmployeeService implements IEmployeeService {
     @Override
     public void addEmployeeService() {
         //String id, String name, String dateOfBirth, String gender, String idCode, String phoneNumber, String email, String trinhDo, String vitri, long luong
-        System.out.println("nhập id");
-        String id = scanner.nextLine();
+        String id;
+        do {
+            System.out.println("nhập id theo định dạng NV-YYYY(Y là số từ 0-9)");
+            id = scanner.nextLine();
+        }while (!Regex.checkId(id));
         System.out.println("nhập tên");
         String name = scanner.nextLine();
         System.out.println("nhập năm sinh");
@@ -32,8 +36,11 @@ public class EmployeeService implements IEmployeeService {
         String gender = scanner.nextLine();
         System.out.println("nhập CMND");
         String idCode = scanner.nextLine();
-        System.out.println("nhập vào số điện thoại");
-        String phoneNumber = scanner.nextLine();
+        String phoneNumber;
+        do {
+            System.out.println("nhập vào số điện thoại (Gồm 10 số và bắt đầu là số 0 )");
+            phoneNumber = scanner.nextLine();
+        }while (!Regex.checkNumberPhone(phoneNumber));
         System.out.println("nhập vào email");
         String email = scanner.nextLine();
         System.out.println("nhập trình độ");

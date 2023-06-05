@@ -17,7 +17,7 @@ public class EmployeeRepository implements IEmployeeRepository {
         String[] info;
         for (String str : strings) {
             info = str.split(",");
-            employees.add(new Employee(info[0], info[1], info[2], info[3], info[4], info[5], info[6], info[7], info[8], Long.valueOf(info[9])));
+            employees.add(new Employee(info[0], info[1], info[2], info[3], info[4], info[5], info[6], info[7], info[8], Long.parseLong(info[9])));
         }
         return employees;
     }
