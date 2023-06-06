@@ -17,21 +17,55 @@ public class FacilityRepository implements IFacilityRepository {
     static {
         //String serviceCode, String serviceName, String usableArea, String rentalCosts, String maximumNumberOfPeople,
         // String rentalType, String roomStandard, String numberOfFloors
-        Facility house1 = new HouseForRent("01", "House1", "tất cả", "10000000",
-                "1000", "vip", "vip", "50");
+        Facility house1 = new HouseForRent("01", "House1", 200, 100000,
+                10, "vip", "vip", 30);
         //String serviceCode, String serviceName, String usableArea, String rentalCosts, String maximumNumberOfPeople,
         // String rentalType, String freeServiceIncluded
-        Facility room1 = new RoomForRent("02", "Room1", "tất cả", "100000000", "1000", "vip", "Massages miễn phí");
+        Facility room1 = new RoomForRent("02", "Room1", 200, 1000000, 20, "vip", "Massages miễn phí");
         //String serviceCode, String serviceName, String usableArea, String rentalCosts, String maximumNumberOfPeople,
         // String rentalType, String roomStandard, String swimmingPoolArea, String numberOfFloors)
-        Facility villa1 = new VillaForRent("03", "Facility", "tất cả", "100000000", "10000", "vip", "vipro", "2000", "100");
+        Facility villa1 = new VillaForRent("03", "Facility", 300, 5000000, 20, "vip", "vipro", 200, 30);
         data.put(house1, 0);
         data.put(room1, 5);
-        data.put(villa1, 0);
+        data.put(villa1, 6);
     }
 
     @Override
     public Map<Facility, Integer> getData() {
+        return data;
+    }
+
+    @Override
+    public void addFacility(Facility facility) {
+        data.put(facility, 0);
+
+
+    }
+
+    @Override
+    public void removeFacility(Facility facility) {
+        data.remove(facility);
+    }
+
+    @Override
+    public Facility getById(String id) {
+        for (Facility f : data.keySet()) {
+            if (f.getServiceCode().equals(id)) {
+                return f;
+            }
+        }
         return null;
+    }
+
+    @Override
+    public List<Facility> getFacilityMaintain() {
+        List<Facility> facilities = new ArrayList<>();
+        for (Facility f : data.keySet()) {
+            Integer maintain = data.get(f);
+            if (maintain >= 5) {
+                facilities.add(f);
+            }
+        }
+        return facilities;
     }
 }

@@ -2,13 +2,13 @@ package castudy.model.facility;
 
 public class VillaForRent extends Facility {
     private String roomStandard;
-    private String swimmingPoolArea;
-    private String numberOfFloors;
+    private float swimmingPoolArea;
+    private int numberOfFloors;
 
     public VillaForRent() {
     }
 
-    public VillaForRent(String serviceCode, String serviceName, String usableArea, String rentalCosts, String maximumNumberOfPeople, String rentalType, String roomStandard, String swimmingPoolArea, String numberOfFloors) {
+    public VillaForRent(String serviceCode, String serviceName, float usableArea, long rentalCosts, int maximumNumberOfPeople, String rentalType, String roomStandard, float swimmingPoolArea, int numberOfFloors) {
         super(serviceCode, serviceName, usableArea, rentalCosts, maximumNumberOfPeople, rentalType);
         this.roomStandard = roomStandard;
         this.swimmingPoolArea = swimmingPoolArea;
@@ -23,19 +23,19 @@ public class VillaForRent extends Facility {
         this.roomStandard = roomStandard;
     }
 
-    public String getSwimmingPoolArea() {
+    public float getSwimmingPoolArea() {
         return swimmingPoolArea;
     }
 
-    public void setSwimmingPoolArea(String swimmingPoolArea) {
+    public void setSwimmingPoolArea(float swimmingPoolArea) {
         this.swimmingPoolArea = swimmingPoolArea;
     }
 
-    public String getNumberOfFloors() {
+    public int getNumberOfFloors() {
         return numberOfFloors;
     }
 
-    public void setNumberOfFloors(String numberOfFloors) {
+    public void setNumberOfFloors(int numberOfFloors) {
         this.numberOfFloors = numberOfFloors;
     }
 
@@ -60,32 +60,32 @@ public class VillaForRent extends Facility {
     }
 
     @Override
-    public String getUsableArea() {
+    public float getUsableArea() {
         return super.getUsableArea();
     }
 
     @Override
-    public void setUsableArea(String usableArea) {
+    public void setUsableArea(float usableArea) {
         super.setUsableArea(usableArea);
     }
 
     @Override
-    public String getRentalCosts() {
+    public long getRentalCosts() {
         return super.getRentalCosts();
     }
 
     @Override
-    public void setRentalCosts(String rentalCosts) {
+    public void setRentalCosts(long rentalCosts) {
         super.setRentalCosts(rentalCosts);
     }
 
     @Override
-    public String getMaximumNumberOfPeople() {
+    public int getMaximumNumberOfPeople() {
         return super.getMaximumNumberOfPeople();
     }
 
     @Override
-    public void setMaximumNumberOfPeople(String maximumNumberOfPeople) {
+    public void setMaximumNumberOfPeople(int maximumNumberOfPeople) {
         super.setMaximumNumberOfPeople(maximumNumberOfPeople);
     }
 

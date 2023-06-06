@@ -3,15 +3,15 @@ package castudy.model.facility;
 public abstract class Facility {
     private String serviceCode;
     private String serviceName;
-    private String usableArea;
-    private String rentalCosts;
-    private String MaximumNumberOfPeople;
+    private float usableArea;
+    private long rentalCosts;
+    private int MaximumNumberOfPeople;
     private String rentalType;
 
     public Facility() {
     }
 
-    public Facility(String serviceCode, String serviceName, String usableArea, String rentalCosts, String maximumNumberOfPeople, String rentalType) {
+    public Facility(String serviceCode, String serviceName, float usableArea, long rentalCosts, int maximumNumberOfPeople, String rentalType) {
         this.serviceCode = serviceCode;
         this.serviceName = serviceName;
         this.usableArea = usableArea;
@@ -36,27 +36,27 @@ public abstract class Facility {
         this.serviceName = serviceName;
     }
 
-    public String getUsableArea() {
+    public float getUsableArea() {
         return usableArea;
     }
 
-    public void setUsableArea(String usableArea) {
+    public void setUsableArea(float usableArea) {
         this.usableArea = usableArea;
     }
 
-    public String getRentalCosts() {
+    public long getRentalCosts() {
         return rentalCosts;
     }
 
-    public void setRentalCosts(String rentalCosts) {
+    public void setRentalCosts(long rentalCosts) {
         this.rentalCosts = rentalCosts;
     }
 
-    public String getMaximumNumberOfPeople() {
+    public int getMaximumNumberOfPeople() {
         return MaximumNumberOfPeople;
     }
 
-    public void setMaximumNumberOfPeople(String maximumNumberOfPeople) {
+    public void setMaximumNumberOfPeople(int maximumNumberOfPeople) {
         MaximumNumberOfPeople = maximumNumberOfPeople;
     }
 

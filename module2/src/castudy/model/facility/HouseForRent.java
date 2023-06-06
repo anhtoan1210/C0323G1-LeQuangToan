@@ -2,12 +2,12 @@ package castudy.model.facility;
 
 public class HouseForRent extends Facility {
     private String roomStandard;
-    private String numberOfFloors;
+    private int numberOfFloors;
 
     public HouseForRent() {
     }
 
-    public HouseForRent(String serviceCode, String serviceName, String usableArea, String rentalCosts, String maximumNumberOfPeople, String rentalType, String roomStandard, String numberOfFloors) {
+    public HouseForRent(String serviceCode, String serviceName, float usableArea, long rentalCosts, int maximumNumberOfPeople, String rentalType, String roomStandard, int numberOfFloors) {
         super(serviceCode, serviceName, usableArea, rentalCosts, maximumNumberOfPeople, rentalType);
         this.roomStandard = roomStandard;
         this.numberOfFloors = numberOfFloors;
@@ -21,11 +21,11 @@ public class HouseForRent extends Facility {
         this.roomStandard = roomStandard;
     }
 
-    public String getNumberOfFloors() {
+    public int getNumberOfFloors() {
         return numberOfFloors;
     }
 
-    public void setNumberOfFloors(String numberOfFloors) {
+    public void setNumberOfFloors(int numberOfFloors) {
         this.numberOfFloors = numberOfFloors;
     }
 
@@ -50,32 +50,32 @@ public class HouseForRent extends Facility {
     }
 
     @Override
-    public String getUsableArea() {
+    public float getUsableArea() {
         return super.getUsableArea();
     }
 
     @Override
-    public void setUsableArea(String usableArea) {
+    public void setUsableArea(float usableArea) {
         super.setUsableArea(usableArea);
     }
 
     @Override
-    public String getRentalCosts() {
+    public long getRentalCosts() {
         return super.getRentalCosts();
     }
 
     @Override
-    public void setRentalCosts(String rentalCosts) {
+    public void setRentalCosts(long rentalCosts) {
         super.setRentalCosts(rentalCosts);
     }
 
     @Override
-    public String getMaximumNumberOfPeople() {
+    public int getMaximumNumberOfPeople() {
         return super.getMaximumNumberOfPeople();
     }
 
     @Override
-    public void setMaximumNumberOfPeople(String maximumNumberOfPeople) {
+    public void setMaximumNumberOfPeople(int maximumNumberOfPeople) {
         super.setMaximumNumberOfPeople(maximumNumberOfPeople);
     }
 
