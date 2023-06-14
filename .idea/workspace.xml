@@ -5,126 +5,89 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68e2334a-22d5-4f5d-8e55-927bf83714f0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/module2/src/ss8_clean_code/TennisGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codegym.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codegym.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai_tap_castudy/bai_demmo.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai_tap_castudy/bai_lam_demo.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai_tap_castudy/lam_lai_oop.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai_tap_castudy/yeu_cau_1_bai_1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai_tap_castudy/yeu_cau_1_bai_2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai_tap_castudy/yeu_cau_2_bai_1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai_tap_castudy/yeu_cau_2_bai_2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai_tap_castudy/yeu_cau_2_bai_3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai_tap_castudy/yeu_cau_3_bai_1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai_tap_castudy/yeu_cau_3_bai_2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai_tap_castudy/yeu_cau_3_bai_3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai_tap_castudy/yeu_cau_3_bai_4.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai_tap_castudy/yeu_cau_4_bai_1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai_tap_castudy/yeu_cau_4_bai_2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai_tap_castudy/yeu_cau_4_bai_3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai_tap_castudy/yeu_cau_5_bai_1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai_tap_castudy/yeu_cau_5_bai_2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai_tap_castudy/yeu_cau_5_bai_3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai_tap_castudy/yeu_cau_6.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai_tap_castudy/yeu_cau_7.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai_tap_castudy/yeu_cau_oop.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai_tap_duoc_giao/ss1_duoc_giao/bai_3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai_tap_duoc_giao/ss1_duoc_giao/bai_tap_1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai_tap_duoc_giao/ss1_duoc_giao/bai_tap_2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai_tap_duoc_giao/ss2_duoc_giao/bai_1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai_tap_duoc_giao/ss2_duoc_giao/bai_tap_2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai_tap_duoc_giao/ss3_duoc_giao/bai_15.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai_tap_duoc_giao/ss3_duoc_giao/bai_17.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai_tap_duoc_giao/ss3_duoc_giao/bai_19.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai_tap_duoc_giao/ss3_duoc_giao/bai_tap_18.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai_tap_duoc_giao/ss4_duoc_giao/bai_10.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai_tap_duoc_giao/ss4_duoc_giao/bai_11.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai_tap_duoc_giao/ss4_duoc_giao/bai_12.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai_tap_duoc_giao/ss4_duoc_giao/bai_8.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai_tap_duoc_giao/ss4_duoc_giao/bai_9.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai_tap_lam_them/bai_1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bai_tap_lam_them/bai_2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/ss7/resizeable/Square.class" beforeDir="false" afterPath="$PROJECT_DIR$/module2/out/production/module2/ss7/resizeable/Square.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/module2/src/ss7/colorable/Colorable.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/ss7/colorable/Colorable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nhung_bai_demmo/bai_hinh_hoc.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nhung_bai_demmo/bai_in_ra_so_thu_n.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nhung_bai_demmo/demm_x_o.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nhung_bai_demmo/demmmo.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nhung_bai_demmo/demmo_chuyen_doi_tien (2).html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nhung_bai_demmo/demmo_may_tinh.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nhung_bai_demmo/demmooo.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nhung_bai_demmo/demo_snt.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nhung_bai_demmo/demo_ss11_tuoi_cha_tuoi_con.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nhung_bai_tap_duoc_giao/bai_20.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nhung_bai_tap_duoc_giao/bai_23.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nhung_bai_tap_duoc_giao/bai_24.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nhung_bai_tap_duoc_giao/bai_25.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nhung_bai_tap_duoc_giao/bai_26.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nhung_bai_tap_duoc_giao/tinh_tong_va_tich.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss10_cau_truc_lap/bai_tap/bai_tap_1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss10_cau_truc_lap/bai_tap/bai_tap_2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss11_cau_truc_lap_2/bai_1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss11_cau_truc_lap_2/bai_tap_2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss11_cau_truc_lap_2/bai_tap_3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss12_mang/bai_tap/bai_tap_1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss12_mang/bai_tap/bai_tap_2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss13_mang_2/bai_1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss13_mang_2/bai_2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss13_mang_2/bai_3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss14_ham_1/bai_1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss14_ham_1/bai_2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss14_ham_2/bai_1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss14_ham_2/bai_2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss14_ham_2/bai_3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss15_huong_doi_tuong/bai_tap.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss3_ma_gia_luu_do/bai_tap/bai_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss3_ma_gia_luu_do/bai_tap/bai_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss4_git_va_html/bai_tap/thiet_ke_giao_dien_don_gian.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss4_git_va_html/bai_tap/thiet_ke_giao_dien_james.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss5_html_form_&amp;_table/bai_tap/thiet_ke_form_dang_nhap_he_thong.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss5_html_form_&amp;_table/bai_tap/thiet_ke_layout.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss6/bai_tap/bai_tap_5.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss7/bai_tap/xay_dung_ung_dung_tinh_tien_tips.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss8_cau_truc_dieu_kien/bai_tap/kiem_tra_tam_giac_vuong_can.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss8_cau_truc_dieu_kien/bai_tap_2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss9_cau_truc_dieu_kien_2/bai_tap/bai_tap_1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss9_cau_truc_dieu_kien_2/bai_tap/bai_tap_2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ss9_cau_truc_dieu_kien_2/bai_tap/bai_tap_3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/ss7/resizeable/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/ss7/resizeable/Square.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2PXeQmXnItltM4gUALkprAu5vu2" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/codegym/module2/src/ss8_clean_code",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/codegym/module2&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\codegym\module2\src\ss8_clean_code" />
     </key>
+  </component>
+  <component name="RunManager" selected="Application.Test">
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss7.resizeable.Test" />
+      <module name="codegym" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ss7.resizeable.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ss7.colorable.Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ss7.colorable.Test" />
+      <module name="codegym" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ss7.colorable.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.ss7.colorable.Test" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -138,7 +101,8 @@
       <workItem from="1683638655244" duration="19000" />
       <workItem from="1683638685504" duration="31000" />
       <workItem from="1684292822810" duration="253000" />
-      <workItem from="1684293102165" duration="1008000" />
+      <workItem from="1684293102165" duration="5758000" />
+      <workItem from="1684301275406" duration="3373000" />
     </task>
     <servers />
   </component>
