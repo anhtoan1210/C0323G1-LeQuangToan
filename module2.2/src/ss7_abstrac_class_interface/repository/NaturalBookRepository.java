@@ -6,9 +6,9 @@ import ss7_abstrac_class_interface.model.NaturalBook;
 import java.util.ArrayList;
 import java.util.List;
 
-public class NaturalRepository implements INaturalBookRepository {
+public class NaturalBookRepository implements INaturalBookRepository {
     private static List<NaturalBook> naturalBooks = new ArrayList<>();
-    private static final String PATH_NATURALBOOK = "src/ss7_abstrac_class_interface/data/file.csv";
+    private static final String PATH_NATURALBOOK = "src/ss7_abstrac_class_interface/data/file_narutalBook.csv";
 
     @Override
     public List<NaturalBook> getAll() {
@@ -21,12 +21,12 @@ public class NaturalRepository implements INaturalBookRepository {
         }
         return naturalBooks;
     }
-
+//String bookName, String publishingCompany, int publishingYear, int numberOfPublications
     @Override
     public void add(NaturalBook naturalBook) {
         List<String> strings = new ArrayList<>();
         //String bookName, String publishingCompany, int publishingYear, int numberOfPublications
-        strings.add(naturalBook.getBookName() + naturalBook.getPublishingCompany() + naturalBook.getPublishingCompany() + naturalBook.getNumberOfPublications());
+        strings.add(naturalBook.getBookName() + "," + naturalBook.getPublishingCompany() + "," + naturalBook.getPublishingYear() + "," + naturalBook.getNumberOfPublications());
         ReadAndWrite.writeFile(PATH_NATURALBOOK, strings, true);
     }
 }

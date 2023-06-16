@@ -25,6 +25,18 @@ public class SocialBookService implements ISocialBookService {
     @Override
     public void add() {
         //  //String bookName, String publishingCompany, int publishingYear, String author
-        System.out.println("nhâpj");
+        //(String bookName, String publishingCompany, int publishingYear, String author
+        System.out.println("nhập tên sách");
+        String bookName = scanner.nextLine();
+        System.out.println("Nhập công ty xuất bản");
+        String publishingCompany = scanner.nextLine();
+        System.out.println("Nhập năm sản xuat");
+        int publishingYear = Integer.parseInt(scanner.nextLine());
+        System.out.println("Nhập tác giả");
+        String author = scanner.nextLine();
+        SocialBook socialBook = new SocialBook(bookName, publishingCompany, publishingYear, author);
+        socialBookRepository.add(socialBook);
+        System.out.println("Thêm mới thành công");
+
     }
 }

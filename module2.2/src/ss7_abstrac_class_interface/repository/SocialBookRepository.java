@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class SocialBookRepository implements ISocialBookRepository {
     private static List<SocialBook> socialBooks = new ArrayList<>();
-    private static final String PATH_NATURALBOOK = "src/ss7_abstrac_class_interface/data/file.csv";
+    private static final String PATH_NATURALBOOK = "src/ss7_abstrac_class_interface/data/file_socialBook.csv";
 
     @Override
     public List<SocialBook> getAll() {
@@ -19,6 +19,7 @@ public class SocialBookRepository implements ISocialBookRepository {
         for (String s : strings) {
             info = s.split(",");
             //String bookName, String publishingCompany, int publishingYear, String author
+            //(String bookName, String publishingCompany, int publishingYear, String author
             socialBooks.add(new SocialBook(info[0], info[1], Integer.parseInt(info[2]), info[3]));
         }
         return socialBooks;
@@ -27,7 +28,7 @@ public class SocialBookRepository implements ISocialBookRepository {
     @Override
     public void add(SocialBook socialBook) {
         List<String> strings = new ArrayList<>();
-        strings.add(socialBook.getBookName() + socialBook.getPublishingCompany() + socialBook.getPublishingYear() + socialBook.getAuthor());
-        ReadAndWrite.writeFile(PATH_NATURALBOOK, strings, false);
+        strings.add(socialBook.getBookName() + "," + socialBook.getPublishingCompany() + "," + socialBook.getPublishingYear() + "," + socialBook.getAuthor());
+        ReadAndWrite.writeFile(PATH_NATURALBOOK, strings, true);
     }
 }

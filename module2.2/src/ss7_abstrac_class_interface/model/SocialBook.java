@@ -23,6 +23,9 @@ public class SocialBook extends Book {
     @Override
     public String toString() {
         return "SocialBook{" +
+                "bookName='" + getBookName() + '\'' +
+                ", publishingCompany='" + getPublishingCompany() + '\'' +
+                ", publishingYear=" + getPublishingYear() +
                 "author='" + author + '\'' +
                 '}';
     }

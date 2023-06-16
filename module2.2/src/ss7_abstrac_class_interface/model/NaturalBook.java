@@ -1,6 +1,6 @@
 package ss7_abstrac_class_interface.model;
 
-public class NaturalBook extends Book  {
+public class NaturalBook extends Book {
     private int numberOfPublications;
 
     public NaturalBook() {
@@ -23,6 +23,9 @@ public class NaturalBook extends Book  {
     @Override
     public String toString() {
         return "NaturalBook{" +
+                "bookName='" + getBookName() + '\'' +
+                ", publishingCompany='" + getPublishingCompany() + '\'' +
+                ", publishingYear=" + getPublishingYear() +
                 "numberOfPublications=" + numberOfPublications +
                 '}';
     }
