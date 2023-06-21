@@ -18,8 +18,10 @@ public class FruitRepository implements IFruitRepository {
         fruits.clear();
         String[] info;
         for (String s : strings) {
-            info = s.split(",");
-            fruits.add(new Fruit(info[0], info[1], Integer.parseInt(info[2]), Integer.parseInt(info[3]), info[4], Float.parseFloat(info[5])));
+            if (s != null && !s.equals("")) {
+                info = s.split(",");
+                fruits.add(new Fruit(info[0], info[1], Integer.parseInt(info[2]), Integer.parseInt(info[3]), info[4], Float.parseFloat(info[5])));
+            }
         }
         return fruits;
     }
@@ -64,6 +66,7 @@ public class FruitRepository implements IFruitRepository {
             if (f.getNameFruit().equals(fruit.getNameFruit())) {
                 f = fruit;
             }
+            strings.add(f.getNameFruit()+",");
         }
         ReadAndWrite.writeFile(PATH_FRUITS, strings, true);
     }
