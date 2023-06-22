@@ -1,8 +1,10 @@
 package ss13_search.model;
 
+import ss13_search.utils.SortByName;
+
 import java.util.Objects;
 
-public class Spending {
+public class Spending implements Comparable<Spending> {
     private String spendingCode;
     private String spendingName;
     private int spendingDate;
@@ -82,5 +84,16 @@ public class Spending {
                 ", amountOfMoney=" + amountOfMoney +
                 ", moreDescription='" + moreDescription + '\'' +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Spending spending) {
+        if(this.amountOfMoney-spending.amountOfMoney<0){
+            return -1;
+        }else if (this.amountOfMoney-spending.amountOfMoney>0){
+            return 1;
+        }else {
+            return this.spendingName.compareTo(spending.getSpendingName());
+        }
     }
 }

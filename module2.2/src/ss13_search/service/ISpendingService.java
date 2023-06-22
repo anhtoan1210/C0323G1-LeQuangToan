@@ -14,4 +14,5 @@ public interface ISpendingService {
     void searchId();
 
     void sortName();
+    void sortPrice();
 }

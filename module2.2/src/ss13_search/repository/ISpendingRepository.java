@@ -15,8 +15,6 @@ public interface ISpendingRepository {
 
     void search(String name);
     void searchId(String id);
-    List<Spending> sortName(List<Spending> spendingList);
-
-
+   List<Spending>sortName(List<Spending> spendingList);
     Spending getById(String codeById);
 }

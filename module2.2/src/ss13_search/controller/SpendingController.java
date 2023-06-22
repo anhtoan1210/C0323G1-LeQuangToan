@@ -19,6 +19,7 @@ public class SpendingController {
             System.out.println("5.Tìm kiếm gần đúng theo tên chi tiêu");
             System.out.println("6.Tìm kiếm theo mã");
             System.out.println("7.Sắp xếp theo tên");
+            System.out.println("8.Sắp xếp theo giá");
             System.out.println("0. thoát");
             int choice = Integer.parseInt(scanner.nextLine());
             switch (choice) {
@@ -41,6 +42,8 @@ public class SpendingController {
                     spendingService.searchId();
                 case 7:
                     spendingService.sortName();
+                    break; case 8:
+                    spendingService.sortPrice();
                     break;
                 case 0:
                     System.exit(1);
