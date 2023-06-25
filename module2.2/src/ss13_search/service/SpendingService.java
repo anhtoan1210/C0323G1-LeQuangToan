@@ -1,6 +1,8 @@
 package ss13_search.service;
 
+import jdk.nashorn.internal.runtime.regexp.joni.Regex;
 import ss13_search.model.Spending;
+import ss13_search.regex.Check;
 import ss13_search.repository.SpendingRepository;
 import ss13_search.utils.SortByName;
 
@@ -24,8 +26,26 @@ public class SpendingService implements ISpendingService {
     public void add() {
         //String spendingCode, String spendingName,
         // int spendingDate, float amountOfMoney, String moreDescription
-        System.out.println("Nhập mã chi tiêu");
-        String id = scanner.nextLine();
+        String id = "";
+        do {
+            List<Spending> spendingList = spendingRepository.getAll();
+            while (true) {
+                System.out.println("Nhập mã chi tiêu theo định dạng SI-XX");
+                try {
+                    id = scanner.nextLine();
+                    for (Spending s : spendingList) {
+                        if (id.equals(s.getSpendingCode())) {
+                            throw new UniqueIDException("Trung Id");
+                        }
+                    }
+                    break;
+                } catch (UniqueIDException e) {
+                    System.out.println(e.getMessage());
+                }
+            }
+        }
+        while (!Check.checkId(id));
+
         System.out.println("Nhập  tên chi tiêu");
         String name = scanner.nextLine();
         System.out.println("Nhập ngày chi tiêu");
@@ -39,23 +59,57 @@ public class SpendingService implements ISpendingService {
         System.out.println("thêm mới thành công");
     }
 
+
     @Override
     public void delete() {
-        System.out.println("nhập id mà bạn muôn xoá");
-        String id = scanner.nextLine();
-        Spending spending = spendingRepository.getById(id);
-        if (spending == null) {
-            System.out.println("Mã chi toeeu không tồn tại");
-        } else {
-            System.out.println("Bạn có chắc chắn muốn xoá");
+        String id="";
+        boolean flag=false;
+        do {
+            List<Spending> spendingList = spendingRepository.getAll();
+            boolean check = false;
+
+            System.out.println("nhập id mà bạn muôn xoá");
+            try {
+                id = scanner.nextLine();
+                for (Spending s : spendingList) {
+                    if (s.getSpendingCode().equals(id)) {
+                        System.out.println("Ok");
+                        flag = true;
+                        check = true;
+                        System.out.println("Bạn có chắc chắn muốn xoá");
             System.out.println("1.Có");
             System.out.println("2.Không");
             int choice = Integer.parseInt(scanner.nextLine());
             if (choice == 1) {
+                Spending spending = spendingRepository.getById(id);
                 spendingRepository.delete(spending);
                 System.out.println("Xoá oke");
             }
+                    }
+                }
+                if (!check) {
+                    throw new IdNotFoundException("ID không tồn tại");
+                }
+            } catch (IdNotFoundException e) {
+                System.out.println(e.getMessage());
+
+            }
         }
+            while (!flag);
+//
+//        Spending spending = spendingRepository.getById(id);
+//        if (spending == null) {
+//            System.out.println("Mã chi toeeu không tồn tại");
+//        } else {
+//            System.out.println("Bạn có chắc chắn muốn xoá");
+//            System.out.println("1.Có");
+//            System.out.println("2.Không");
+//            int choice = Integer.parseInt(scanner.nextLine());
+//            if (choice == 1) {
+//                spendingRepository.delete(spending);
+//                System.out.println("Xoá oke");
+//            }
+//        }
     }
 
     @Override

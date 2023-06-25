@@ -67,6 +67,7 @@ public class SpendingRepository implements ISpendingRepository {
                 System.out.println(s);
             }
         }
+
     }
 
     @Override
