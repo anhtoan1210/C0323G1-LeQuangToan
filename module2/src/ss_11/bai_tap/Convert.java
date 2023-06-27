@@ -14,6 +14,7 @@ public class Convert {
         int number = stack.size();
         for (int i = 0; i < number; i++) {
             System.out.print(+stack.pop());
+
         }
     }
 }

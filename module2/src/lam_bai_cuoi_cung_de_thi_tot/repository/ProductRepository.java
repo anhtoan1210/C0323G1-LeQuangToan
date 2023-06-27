@@ -16,8 +16,10 @@ public class ProductRepository implements IProductRepository {
         products.clear();
         String[] info;
         for (String s : strings) {
-            info = s.split(",");
-            products.add(new Product(info[0], info[1], Integer.parseInt(info[2]), Float.parseFloat(info[3]), info[4]));
+            if (s != null && !s.equals("")) {
+                info = s.split(",");
+                products.add(new Product(info[0], info[1], Integer.parseInt(info[2]), Float.parseFloat(info[3]), info[4]));
+            }
         }
         return products;
     }
