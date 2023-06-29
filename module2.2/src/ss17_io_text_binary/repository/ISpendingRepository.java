@@ -11,7 +11,7 @@ public interface ISpendingRepository {
 
     void delete(Spending spending);
 
-    void edit(Spending spending);
+    void edit(int index,Spending spending);
 
     void search(String name);
     void searchId(String id);

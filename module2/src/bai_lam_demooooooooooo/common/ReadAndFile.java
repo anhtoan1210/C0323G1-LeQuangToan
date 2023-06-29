@@ -1,10 +1,10 @@
-package ss17_io_text_binary.common;
+package bai_lam_demooooooooooo.common;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ReadAndWrite {
+public class ReadAndFile {
     public static List<String> readFile(String path) {
         List<String> strings = new ArrayList<>();
         try {
@@ -15,10 +15,12 @@ public class ReadAndWrite {
                 strings.add(line);
             }
             bufferedReader.close();
+
         } catch (FileNotFoundException e) {
-            System.out.println("File không tồn tại");
+            System.out.println("file không tồn tại");
+            ;
         } catch (IOException e) {
-            System.out.println("Lỗi đọc file");
+            System.out.println("lỗi đọc file");
         }
         return strings;
     }
@@ -33,7 +35,8 @@ public class ReadAndWrite {
             }
             bufferedWriter.close();
         } catch (IOException e) {
-            System.out.println("Loi doc file");
+            System.out.println("lỗi đo file");
+            ;
         }
     }
 }

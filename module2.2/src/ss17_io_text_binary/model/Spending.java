@@ -2,9 +2,10 @@ package ss17_io_text_binary.model;
 
 import ss17_io_text_binary.utils.SortByName;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Spending implements Comparable<Spending> {
+public class Spending implements Comparable<Spending>, Serializable {
     private String spendingCode;
     private String spendingName;
     private int spendingDate;
@@ -78,7 +79,7 @@ public class Spending implements Comparable<Spending> {
     @Override
     public String toString() {
         return "Spending{" +
-                "spendingCode='" + spendingCode + '\'' +
+                "spendingCode='" + spendingCode +
                 ", spendingName='" + spendingName + '\'' +
                 ", spendingDate=" + spendingDate +
                 ", amountOfMoney=" + amountOfMoney +

@@ -14,7 +14,7 @@ public class Main {
         System.out.println("nhập vào số lượng của mảng");
         n = Integer.parseInt(scanner.nextLine());
         int[] arr = new int[n];
-        System.out.println("nhập các phaanf tử cho mảng");
+        System.out.println("nhập các phần tử cho mảng");
         for (int i = 0; i < n; i++) {
             System.out.println("nhập phần tử thứ" + i);
             arr[i] = Integer.parseInt(scanner.nextLine());

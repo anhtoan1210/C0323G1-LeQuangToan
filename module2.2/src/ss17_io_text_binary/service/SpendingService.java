@@ -120,8 +120,6 @@ public class SpendingService implements ISpendingService {
         if (spending == null) {
             System.out.println("mã chi tiêu khong tồn tại");
         } else {
-            spendingRepository.delete(spending);
-            while (true) {
                 System.out.println("Chọn thứ cần chỉnh sửa");
                 System.out.println("1.Sửa tên");
                 System.out.println("2.Sửa ngày");
@@ -133,29 +131,22 @@ public class SpendingService implements ISpendingService {
                     case "1":
                         System.out.println("Nhập  tên chi tiêu");
                         String name = scanner.nextLine();
-                        Spending spending1 = new Spending(id, name, spending.getSpendingDate(), spending.getAmountOfMoney(), spending.getMoreDescription());
-                        spendingRepository.add(spending1);
+                        spendingRepository.edit(Integer.parseInt(name),spending);
                         System.out.println("Sửa thành công");
                         break;
                     case "2":
                         System.out.println("Nhập ngày chi tiêu");
                         int spendingDate = Integer.parseInt(scanner.nextLine());
-                        Spending spending2 = new Spending(id, spending.getSpendingName(), spendingDate, spending.getAmountOfMoney(), spending.getMoreDescription());
-                        spendingRepository.add(spending2);
                         System.out.println("Sửa thành công");
                         break;
                     case "3":
                         System.out.println("Nhập số tiền");
                         float amountOfMoney = Float.parseFloat(scanner.nextLine());
-                        Spending spending3 = new Spending(id, spending.getSpendingName(), spending.getSpendingDate(), amountOfMoney, spending.getMoreDescription());
-                        spendingRepository.add(spending3);
                         System.out.println("Sửa thành công");
                         break;
                     case "4":
                         System.out.println("Nhập mô tả");
                         String moreDescription = scanner.nextLine();
-                        Spending spending4 = new Spending(id, spending.getSpendingName(), spending.getSpendingDate(), spending.getAmountOfMoney(), moreDescription);
-                        spendingRepository.add(spending4);
                         System.out.println("Sửa thành công");
                         break;
                     case "0":
@@ -166,7 +157,7 @@ public class SpendingService implements ISpendingService {
                 }
             }
         }
-    }
+
 
     @Override
     public void search() {
