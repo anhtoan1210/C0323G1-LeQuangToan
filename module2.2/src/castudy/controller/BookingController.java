@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class BookingController {
     private static Scanner scanner = new Scanner(System.in);
 
-    public  void menuBooking() {
+    public void menuBooking() {
         System.out.println("---------------------------------------------------------------------");
         System.out.println("------Mời bạn lựa chọn chức năng-----");
         System.out.println("1. Thêm đặt phòng mới");
@@ -14,9 +14,23 @@ public class BookingController {
         System.out.println("4.Hiển thị danh sách hợp đồng");
         System.out.println("5.Chỉnh sửa hợp đồng");
         System.out.println("6.Thoát khỏi Menu");
-        int choice = Integer.parseInt(scanner.nextLine());
+        int choice;
+        while (true) {
+            try {
+                choice = Integer.parseInt(scanner.nextLine());
+                if (choice <= 6 && choice > 0) {
+                    break;
+                }
+                System.out.println("Vui lòng nhập đúng so");
+            } catch (NumberFormatException numberFormatException) {
+                System.out.println("vui lòng nhập số");
+            }catch (Exception e){
+
+            }
+        }
         switch (choice) {
             case 1:
+                System.out.println("coming soon");
                 break;
             case 2:
                 break;

@@ -22,7 +22,20 @@ public class FacilityController {
             System.out.println("3.Hiển thị danh sách bảo trì");
             System.out.println("4.Xoá cở sở");
             System.out.println("5.Thoát khỏi menu");
-            int choice = Integer.parseInt(scanner.nextLine());
+            int choice;
+            while (true) {
+                try {
+                    choice = Integer.parseInt(scanner.nextLine());
+                    if (choice > 0 && choice <= 5) {
+                        break;
+                    }
+                    System.out.println("Vui lòng nhập các mục có trong Menu");
+                } catch (NumberFormatException numberFormatException) {
+                    System.out.println("Vui long nhập số");
+                } catch (Exception e) {
+
+                }
+            }
             switch (choice) {
                 case 1:
                     break;

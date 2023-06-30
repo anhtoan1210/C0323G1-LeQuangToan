@@ -20,7 +20,19 @@ public class EmployeeController {
             System.out.println("4. Xoá nhân viên");
             System.out.println("5. Tìm kiếm nhân viên");
             System.out.println("6. Thoát khỏi Menu");
-            int choice = Integer.parseInt(scanner.nextLine());
+            int choice;
+            while (true) {
+                try {
+                    choice = Integer.parseInt(scanner.nextLine());
+                    if (choice > 0 && choice <= 6) {
+                        break;
+                    }
+                    System.out.println("Vui lòng nhập đúng trong Menu");
+                } catch (NumberFormatException numberFormatException) {
+                    System.out.println("Vui lòng nhập số");
+                } catch (Exception e) {
+                }
+            }
             switch (choice) {
                 case 1:
                     employeeService.displayEmployee();
@@ -40,6 +52,7 @@ public class EmployeeController {
                 case 6:
                     System.exit(1);
             }
-        } while (true);
+        }
+        while (true);
     }
 }

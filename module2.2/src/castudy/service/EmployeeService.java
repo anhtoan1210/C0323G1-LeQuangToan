@@ -37,9 +37,49 @@ public class EmployeeService implements IEmployeeService {
         String numberPhone = scanner.nextLine();
         System.out.println("Nhập email");
         String email = scanner.nextLine();
-        System.out.println("Nhập cấp độ");
-        String lerVer = scanner.nextLine();
-        System.out.println("Nhập địa chỉ ");
+
+        String lerVer;
+        AL:
+        do {
+            System.out.println("Nhập trình độ");
+            System.out.println("1.Trung cấp");
+            System.out.println("2.Cao đẳng");
+            System.out.println("3.Đại học");
+            System.out.println("4.Sau đại học");
+            int choice;
+            while (true) {
+                try {
+                    choice = Integer.parseInt(scanner.nextLine());
+                    if (choice > 0 && choice <= 4) {
+                        break;
+                    }
+                    System.out.println("Vui lòng nhập trong khoảng 1-4");
+                } catch (NumberFormatException numberFormatException) {
+                    System.out.println("Vui lòng nhập số");
+                } catch (Exception e) {
+
+                }
+            }
+            switch (choice) {
+                case 1:
+                    lerVer = "Trung cấp";
+                    break AL;
+                case 2:
+                    lerVer = "Cao đẳng";
+                    break AL;
+                case 3:
+                    lerVer = "Đại học";
+                    break AL;
+                case 4:
+                    lerVer = "Sau đại học";
+                    break AL;
+                default:
+                    System.out.println("Nhập sai nhập lại");
+                    break;
+            }
+        } while (true);
+
+        System.out.println("Vị trí ");
         String location = scanner.nextLine();
         System.out.println("Nhập lương");
         long wage = Long.parseLong(scanner.nextLine());
@@ -83,6 +123,35 @@ public class EmployeeService implements IEmployeeService {
 
     @Override
     public void editEmployee() {
-
+        System.out.println("nhập id mà bạn muốn sửa");
+        String id = scanner.nextLine();
+        List<Employee> employees = employeeRepository.getAll();
+        for (int i = 0; i < employees.size(); i++) {
+            if (id.equals(employees.get(i).getId())) {
+                //String id, String name, String dateOfBirth, String gender, String idCode,
+                // String numberPhone, String email, String lerVer, String location, long wage)
+                System.out.println("Nhập tên");
+                String name = scanner.nextLine();
+                System.out.println("Nhập ngày sinh");
+                String dateOfBirth = scanner.nextLine();
+                System.out.println("Nhập giới tính");
+                String gender = scanner.nextLine();
+                System.out.println("Nhập chứng minh nhân dân");
+                String idCode = scanner.nextLine();
+                System.out.println("Nhập sô diện thoại");
+                String numberPhone = scanner.nextLine();
+                System.out.println("Nhập email");
+                String email = scanner.nextLine();
+                System.out.println("Nhập cấp dộ");
+                String lerVer = scanner.nextLine();
+                System.out.println("Nhập địa chỉ");
+                String location = scanner.nextLine();
+                System.out.println("Nhập lương");
+                long wage = Long.parseLong(scanner.nextLine());
+                Employee employee = new Employee(id, name, dateOfBirth, gender, idCode, numberPhone, email, lerVer, location, wage);
+                employeeRepository.edit(i, employee);
+                System.out.println("Sửa thành công");
+            }
+        }
     }
 }

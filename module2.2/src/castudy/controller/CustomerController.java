@@ -21,7 +21,20 @@ public class CustomerController {
             System.out.println("4. Xoá khách hàng");
             System.out.println("5. Tìm kiếm khách hàng");
             System.out.println("6. Thoát khỏi Menu");
-            int choice = Integer.parseInt(scanner.nextLine());
+            int choice;
+            while (true) {
+                try {
+                    choice = Integer.parseInt(scanner.nextLine());
+                    if (choice > 0 && choice <= 6) {
+                        break;
+                    }
+                    System.out.println("Vui lòng nhập trong khoảng Menu của chương trình");
+                } catch (NumberFormatException numberFormatException) {
+                    System.out.println("Vui lòng nhập số");
+                } catch (Exception e) {
+
+                }
+            }
             switch (choice) {
                 case 1:
                     customerService.displayCustomer();
@@ -30,7 +43,7 @@ public class CustomerController {
                     customerService.addCustomer();
                     break;
                 case 3:
-
+                    customerService.editCustomer();
                     break;
                 case 4:
                     customerService.deleteCustomer();
