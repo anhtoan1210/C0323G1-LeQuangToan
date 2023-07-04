@@ -48,9 +48,14 @@ public class EmployeeRepository implements IEmployeeRepository {
 
     @Override
     public void edit(int index, Employee employee) {
-        List<String> strings = ReadAndWrite.readFile(PATH_EMPLOYEE);
-        strings.set(index, employee.getId() + "," + employee.getName() + "," + employee.getDateOfBirth() + "," + employee.getGender() + "," + employee.getIdCode() + "," + employee.getNumberPhone() + "," + employee.getEmail() + "," + employee.getLerVer() + "," + employee.getLocation() + "," + employee.getWage());
-        ReadAndWrite.writeFile(PATH_EMPLOYEE, strings, false);
+        employees = getAll();
+        List<String> stringList = new ArrayList<>();
+        employees.set(index,employee);
+        for (Employee employee1: employees) {
+            stringList.add(employee1.getId() + "," + employee1.getName() + "," + employee1.getDateOfBirth() + "," + employee1.getGender() + "," +
+                    employee1.getIdCode() + "," + employee1.getNumberPhone() + "," + employee1.getEmail() + "," + employee1.getLerVer() + "," + employee1.getLocation() + "," + employee1.getWage());
+        }
+        ReadAndWrite.writeFile(PATH_EMPLOYEE, stringList, false);
     }
 
     @Override

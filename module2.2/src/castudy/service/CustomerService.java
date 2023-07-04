@@ -1,6 +1,7 @@
 package castudy.service;
 
 import castudy.model.peson.Customer;
+import castudy.regex.Regex;
 import castudy.repository.CustomerRepository;
 
 import java.util.List;
@@ -21,10 +22,17 @@ public class CustomerService implements ICustomerService {
 
     @Override
     public void addCustomer() {
-        System.out.println("Nhập mã khách hàng muốn thêm");
-        String id = scanner.nextLine();
-        System.out.println("Nhập tên khách hàng");
-        String name = scanner.nextLine();
+        String id;
+        do {
+            System.out.println("Nhập mã khách hàng muốn thêm theo định dạng(KH-YYYY)");
+            id = scanner.nextLine();
+        } while (!Regex.checkIdCustomer(id));
+        String name;
+        do {
+            System.out.println("Nhập tên khách hàng(Phải viết hoa chữa cái đầu của mỗi từ)");
+            name = scanner.nextLine();
+        } while (!Regex.checkName(name));
+
         System.out.println("Nhập ngày sinh");
         String dateOfBirth = scanner.nextLine();
         String gender;
@@ -65,8 +73,12 @@ public class CustomerService implements ICustomerService {
         } while (true);
         System.out.println("Nhập chứng minh nhân dân");
         String idCode = scanner.nextLine();
-        System.out.println("Nhập số điện thoại");
-        String numberPhone = scanner.nextLine();
+        String numberPhone;
+        do {
+            System.out.println("Nhập số điện thoại(bắt đầu từ 0 và đủ 10 số.)");
+             numberPhone = scanner.nextLine();
+        } while (!Regex.checkNumberPhone(numberPhone));
+
         System.out.println("Nhập email");
         String email = scanner.nextLine();
         System.out.println("Nhập địa chỉ");
@@ -75,11 +87,11 @@ public class CustomerService implements ICustomerService {
         AC:
         do {
             System.out.println("Chọn cấp độ khách hàng");
-            System.out.println("1.(Diamond");
-            System.out.println("2.Platinum");
-            System.out.println("3.Gold");
-            System.out.println("4.Silver");
-            System.out.println("5.Member");
+            System.out.println("1.(Kim cương");
+            System.out.println("2.Bạch kim");
+            System.out.println("3.Vàng");
+            System.out.println("4.Bạc");
+            System.out.println("5.Thành viên");
             int choice;
             while (true) {
                 try {

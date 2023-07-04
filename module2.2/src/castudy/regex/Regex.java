@@ -5,8 +5,12 @@ public class Regex {
         return id.matches("^NV-\\d{4}$");
     }
 
+    public static boolean checkIdCustomer(String id) {
+        return id.matches("^KH-\\d{4}$");
+    }
+
     public static boolean checkName(String name) {
-        return name.matches("^ \\[A-Z][a-z]*([A-Z][a-z*])*\\b$");
+        return name.matches("^[A-Z][a-z]*((\\s)*||(\\s[A-Z][a-z]*)*)$");
     }
 
     public static boolean checkGender(String gender) {
@@ -53,4 +57,7 @@ public class Regex {
         return type.matches("^(Năm)|(Tháng)|(Ngày)|(Giờ)$");
     }
 
+    public static boolean checkDate(String date) {
+        return date.matches("^\\d{4}-((0\\d)||(1[012]))-([012]\\d||30||31)$");
+    }
 }

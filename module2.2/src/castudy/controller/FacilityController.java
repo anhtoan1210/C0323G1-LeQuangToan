@@ -1,11 +1,13 @@
 package castudy.controller;
 
 import castudy.model.facility.Facility;
+import castudy.service.FacilityService;
 
 import java.util.Scanner;
 
 public class FacilityController {
     private static Scanner scanner = new Scanner(System.in);
+    private static FacilityService facilityService = new FacilityService();
 
     public void menuFacility() {
         do {
@@ -38,12 +40,16 @@ public class FacilityController {
             }
             switch (choice) {
                 case 1:
+                    facilityService.displayFacility();
                     break;
                 case 2:
+                    facilityService.addFacility();
                     break;
                 case 3:
+                    facilityService.displayFacilityMaintain();
                     break;
                 case 4:
+                    facilityService.deleteFacility();
                     break;
                 case 5:
                     System.exit(1);

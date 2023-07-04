@@ -41,6 +41,7 @@ public class EmployeeController {
                     employeeService.addEmployee();
                     break;
                 case 3:
+                    employeeService.editEmployee();
                     break;
                 case 4:
                     employeeService.deleteEmployee();
